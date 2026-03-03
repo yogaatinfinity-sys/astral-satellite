@@ -68,7 +68,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Menu (Centered) */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -81,7 +81,7 @@ export function Navbar() {
                 </div>
 
                 {/* Desktop Button (Right Side) */}
-                <div className="hidden md:flex items-center gap-4 z-50">
+                <div className="hidden lg:flex items-center gap-4 z-50">
                     <Link href={adminPath}>
                         <Button
                             variant="primary"
@@ -100,7 +100,7 @@ export function Navbar() {
                 </div>
 
                 {/* Mobile Menu Toggle (Right) */}
-                <div className="md:hidden z-50">
+                <div className="lg:hidden z-50">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-charcoal focus:outline-none">
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -115,7 +115,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="fixed inset-0 w-full h-screen bg-soft-bone flex flex-col items-center justify-center gap-10 md:hidden z-40 px-6"
+                        className="fixed inset-0 w-full h-screen bg-soft-bone flex flex-col items-center justify-center gap-10 lg:hidden z-40 px-6"
                     >
                         <div className="flex flex-col items-center gap-8">
                             {navLinks.map((link) => (

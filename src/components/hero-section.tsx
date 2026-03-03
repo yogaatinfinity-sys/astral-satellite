@@ -46,7 +46,7 @@ export function HeroSection() {
     }
 
     return (
-        <section ref={sectionRef} className="relative min-h-[90vh] lg:h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-soft-bone pt-20">
+        <section ref={sectionRef} className="relative min-h-[90vh] lg:h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-soft-bone pt-[120px] lg:pt-20">
             {/* Background patterns or subtle gradients */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-soft-bone to-soft-bone opacity-50 pointer-events-none" />
 
