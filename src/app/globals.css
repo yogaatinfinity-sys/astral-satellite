@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #6fcbcc;
+  /* Brand Primary */
+  --color-teal-foreground: #FFFFFF;
+
+  --color-brand-primary: #6fcbcc;
+  --color-brand-primary-foreground: #FFFFFF;
+
+  --color-soft-bone: #FAFAEE;
+  --color-soft-bone-foreground: #2D3748;
+
+  --color-gold: #D4AF37;
+  --color-gold-foreground: #2D3748;
+
+  --color-cream: #F5F5DC;
+  --color-cream-foreground: #2D3748;
+
+  --color-charcoal: #2D3748;
+  /* Dark Gray */
+  --color-charcoal-foreground: #F5F5DC;
+
+  --font-serif: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 3s infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-teal {
+    background-color: var(--color-teal);
+    color: var(--color-teal-foreground);
+  }
+
+  .text-teal {
+    color: var(--color-teal);
+  }
+
+  .border-teal {
+    border-color: var(--color-teal);
+  }
+
+  .bg-gold {
+    background-color: var(--color-gold);
+    color: var(--color-gold-foreground);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+
+  .bg-soft-bone {
+    background-color: var(--color-soft-bone);
+    color: var(--color-soft-bone-foreground);
+  }
+
+  .text-soft-bone {
+    color: var(--color-soft-bone);
+  }
+
+  .bg-brand-primary {
+    background-color: var(--color-brand-primary);
+    color: var(--color-brand-primary-foreground);
+  }
+
+  .text-brand-primary {
+    color: var(--color-brand-primary);
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    background-color: var(--color-soft-bone);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+}
