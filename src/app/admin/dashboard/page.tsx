@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { motion, AnimatePresence } from "framer-motion"
-import { Trash2, UserPlus, LogOut, LayoutDashboard, Search, AlertCircle, Users, X, Home, QrCode, Calendar, MapPin, Globe } from "lucide-react"
+import { Trash2, UserPlus, LogOut, LayoutDashboard, Search, AlertCircle, Users, X, Home, QrCode, Calendar, MapPin, Globe, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
 import { cn } from "@/lib/utils"
@@ -160,6 +160,23 @@ export default function AdminDashboard() {
         }
     }
 
+    async function toggleDefaultMode(memberId: string, currentMode: "online" | "offline" | undefined) {
+        const newMode = currentMode === "online" ? "offline" : "online"
+
+        // Optimistic update
+        setMembers(members.map(m => m.id === memberId ? { ...m, default_mode: newMode } : m))
+
+        const { error } = await supabase
+            .from("members")
+            .update({ default_mode: newMode })
+            .eq("id", memberId)
+
+        if (error) {
+            setToast({ message: "Failed to update member mode", type: "error" })
+            fetchMembers() // Revert state
+        }
+    }
+
     const filteredMembers = members.filter(m => {
         const query = searchQuery.toLowerCase()
         const emailMatch = m.email?.toLowerCase().includes(query)
@@ -170,18 +187,12 @@ export default function AdminDashboard() {
     if (!user) return null
 
     // Compute Live Analytics
-    const todayStr = new Date().toDateString()
     let presentOfflineCount = 0
     let presentOnlineCount = 0
 
     members.forEach(member => {
-        if (member.attendance_history) {
-            const attendedToday = member.attendance_history.find(record => new Date(record.date).toDateString() === todayStr)
-            if (attendedToday) {
-                if (attendedToday.mode === "offline") presentOfflineCount++
-                if (attendedToday.mode === "online") presentOnlineCount++
-            }
-        }
+        if (member.default_mode === "offline") presentOfflineCount++
+        if (member.default_mode === "online") presentOnlineCount++
     })
 
     return (
@@ -207,14 +218,6 @@ export default function AdminDashboard() {
                         >
                             <QrCode size={18} className="mr-2" /> Global QR
                         </Button>
-                        <Link href="/">
-                            <Button
-                                variant="outline"
-                                className="border-[#6fcbcc]/40 text-[#6fcbcc] hover:bg-[#6fcbcc]/10 hover:text-[#6fcbcc] transition-colors bg-white/50 backdrop-blur-sm"
-                            >
-                                <Home size={18} className="mr-2" /> Back to Website
-                            </Button>
-                        </Link>
                         <Button
                             onClick={handleLogout}
                             variant="ghost"
@@ -454,44 +457,59 @@ export default function AdminDashboard() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, scale: 0.95 }}
                                             layout
-                                            className="bg-white p-4 md:p-5 rounded-2xl border border-[#6fcbcc]/10 shadow-sm flex items-center justify-between group hover:border-[#6fcbcc]/30 transition-all hover:shadow-md"
+                                            className="bg-white p-4 md:p-5 rounded-2xl border border-[#6fcbcc]/10 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-4 items-center group hover:border-[#6fcbcc]/30 transition-all hover:shadow-md"
                                         >
-                                            <div className="flex items-center gap-3 md:gap-4 min-w-0">
-                                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#6fcbcc]/10 flex-shrink-0 flex items-center justify-center text-[#6fcbcc] font-bold text-base md:text-lg border border-[#6fcbcc]/20">
+                                            {/* Avatar & Name/Email (col-span-12 md:col-span-5) */}
+                                            <div className="flex items-center gap-3 min-w-0 md:col-span-5">
+                                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#6fcbcc]/10 flex-shrink-0 flex items-center justify-center text-[#6fcbcc] font-bold text-lg border border-[#6fcbcc]/20">
                                                     {(member.full_name || member.email || "S")[0].toUpperCase()}
                                                 </div>
                                                 <div className="min-w-0 flex-1">
-                                                    <div className="flex items-center gap-2">
-                                                        <p className="font-bold text-base md:text-lg text-charcoal leading-tight truncate w-full">
-                                                            {member.full_name || "Unknown Student"}
-                                                        </p>
-                                                        <span className={cn(
-                                                            "text-xs px-2 py-0.5 rounded-full font-medium ml-2 shrink-0 border",
-                                                            member.default_mode === "online" ? "bg-blue-50 text-blue-600 border-blue-200" : "bg-green-50 text-green-600 border-green-200"
-                                                        )}>
-                                                            {member.default_mode === "online" ? "Online" : "Studio"}
-                                                        </span>
-                                                    </div>
-                                                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mt-1">
-                                                        <p className="text-xs md:text-sm text-charcoal/40 font-medium truncate w-full">
-                                                            {member.email} • {member.phone_number || "No Phone"}
-                                                        </p>
-                                                        <button
-                                                            onClick={() => setHistoryModalMember(member)}
-                                                            className="text-xs font-bold text-[#6fcbcc] bg-[#6fcbcc]/10 px-3 py-1 rounded-lg w-fit shrink-0 hover:bg-[#6fcbcc]/20 transition-colors flex items-center gap-1 active:scale-95"
-                                                        >
-                                                            {member.attendance_history?.length || 0} Sessions <span className="underline ml-1">History</span>
-                                                        </button>
-                                                    </div>
+                                                    <p className="font-bold text-lg text-charcoal truncate w-full">
+                                                        {member.full_name || "Unknown Student"}
+                                                    </p>
+                                                    <p className="text-sm text-charcoal/40 font-medium truncate w-full flex items-center gap-1.5 mt-0.5">
+                                                        <Mail size={14} /> {member.email}
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-2">
+
+                                            {/* Phone (col-span-12 md:col-span-3) */}
+                                            <div className="flex items-center gap-2 text-sm text-charcoal/60 md:col-span-3 font-medium">
+                                                <Phone size={14} className="text-[#6fcbcc]" />
+                                                {member.phone_number || "No Phone"}
+                                            </div>
+
+                                            {/* Mode Toggle (col-span-12 md:col-span-2) */}
+                                            <div className="md:col-span-2">
+                                                <button
+                                                    onClick={() => toggleDefaultMode(member.id, member.default_mode)}
+                                                    className={cn(
+                                                        "flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg font-bold w-fit border transition-colors",
+                                                        member.default_mode === "online"
+                                                            ? "bg-blue-50 text-blue-600 border-blue-200 hover:bg-blue-100"
+                                                            : "bg-green-50 text-green-600 border-green-200 hover:bg-green-100"
+                                                    )}
+                                                >
+                                                    {member.default_mode === "online" ? <Globe size={14} /> : <Home size={14} />}
+                                                    {member.default_mode === "online" ? "Online" : "Studio"}
+                                                </button>
+                                            </div>
+
+                                            {/* Actions (col-span-12 md:col-span-2) */}
+                                            <div className="flex items-center justify-end gap-2 md:col-span-2 mt-2 md:mt-0">
+                                                <button
+                                                    onClick={() => setHistoryModalMember(member)}
+                                                    className="text-xs font-bold text-[#6fcbcc] bg-[#6fcbcc]/10 px-3 py-2 rounded-lg hover:bg-[#6fcbcc]/20 transition-colors flex items-center gap-1.5 active:scale-95 whitespace-nowrap"
+                                                >
+                                                    <Calendar size={14} /> {member.attendance_history?.length || 0}
+                                                </button>
                                                 <button
                                                     onClick={() => handleDelete(member.id)}
-                                                    className="p-2 md:p-3 text-charcoal/20 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all flex-shrink-0"
+                                                    className="p-2 text-charcoal/20 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all flex-shrink-0 ml-1"
                                                     title="Revoke Access"
                                                 >
-                                                    <Trash2 size={20} className="w-4 h-4 md:w-5 md:h-5" />
+                                                    <Trash2 size={18} />
                                                 </button>
                                             </div>
                                         </motion.div>
@@ -575,7 +593,7 @@ export default function AdminDashboard() {
 
                             <div className="bg-white p-4 rounded-2xl border-2 border-dashed border-[#6fcbcc]/40 inline-block mb-8 relative group cursor-pointer hover:border-[#6fcbcc] transition-colors" title="Right click to save/print!">
                                 <QRCodeCanvas
-                                    value="http://192.168.29.46:3000/check-in"
+                                    value={`${typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000'}/check-in`}
                                     size={200}
                                     bgColor={"#ffffff"}
                                     fgColor={"#2D7A7B"} // Teal

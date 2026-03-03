@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { PageTransition } from "@/components/page-transition";
@@ -18,6 +18,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Yoga @ Infinity",
   description: "Experience tranquility and strength with our premium yoga sessions.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

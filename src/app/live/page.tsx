@@ -68,7 +68,6 @@ export default function LivePage() {
 
     async function handleOnlineCheckIn() {
         if (!verifiedEmail) {
-            window.open("https://meet.google.com/new", "_blank")
             return
         }
 
@@ -106,8 +105,6 @@ export default function LivePage() {
             }
         } catch (e) {
             console.error("Auto check-in failed", e)
-        } finally {
-            window.open("https://meet.google.com/new", "_blank")
         }
     }
 
@@ -318,14 +315,27 @@ export default function LivePage() {
                                         </div>
                                     </div>
 
-                                    <Button
-                                        size="lg"
-                                        style={{ backgroundColor: "#6fcbcc" }}
-                                        className="hover:scale-105 text-white rounded-full px-12 py-9 text-2xl shadow-2xl transition-all w-full md:w-auto font-bold group"
-                                        onClick={handleOnlineCheckIn}
-                                    >
-                                        <Video className="mr-3 group-hover:rotate-12 transition-transform" size={28} /> Join Now
-                                    </Button>
+                                    <div className="flex flex-col items-center gap-3 w-full md:w-auto">
+                                        <a
+                                            href="https://meet.google.com/new"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={handleOnlineCheckIn}
+                                            style={{ backgroundColor: "#6fcbcc" }}
+                                            className="inline-flex items-center justify-center hover:scale-105 text-white rounded-full px-12 py-4 text-2xl shadow-2xl transition-all w-full font-bold group"
+                                        >
+                                            <Video className="mr-3 group-hover:rotate-12 transition-transform" size={28} /> Join Now
+                                        </a>
+                                        <button
+                                            onClick={() => {
+                                                navigator.clipboard.writeText("https://meet.google.com/new")
+                                                alert("Meeting link copied to clipboard!")
+                                            }}
+                                            className="text-sm text-charcoal/50 hover:text-[#6fcbcc] underline transition-colors"
+                                        >
+                                            Link not opening? Copy to clipboard
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

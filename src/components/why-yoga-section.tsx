@@ -73,7 +73,8 @@ export function WhyYogaSection() {
                             className="flex flex-col items-center text-center group"
                         >
                             <motion.div
-                                whileHover={{ scale: 1.05 }}
+                                whileInView={{ scale: 1.05 }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.4 }}
                                 className="relative w-full aspect-square max-w-[260px] mb-8 cursor-pointer"
                             >
