@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 export function ZenGravitySection() {
-    const [gravityOff, setGravityOff] = useState(false)
     const containerRef = useRef<HTMLElement>(null)
     const [isMobile, setIsMobile] = useState(false)
 
@@ -40,26 +39,6 @@ export function ZenGravitySection() {
             />
 
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center">
-                <label className="flex items-center gap-4 cursor-pointer mb-12 group">
-                    <span className={`text-sm font-medium tracking-widest uppercase transition-opacity duration-300 ${gravityOff ? "opacity-50" : "opacity-100"}`}>
-                        Grounded
-                    </span>
-                    <div
-                        className={`w-16 h-8 rounded-full p-1 transition-colors duration-500 flex items-center ${gravityOff ? "bg-gold" : "bg-charcoal/10"}`}
-                        onClick={() => setGravityOff(!gravityOff)}
-                    >
-                        <motion.div
-                            layout
-                            className="w-6 h-6 bg-white rounded-full shadow-md"
-                            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                            style={{ marginLeft: gravityOff ? "2rem" : "0" }}
-                        />
-                    </div>
-                    <span className={`text-sm font-medium tracking-widest uppercase transition-opacity duration-300 ${gravityOff ? "opacity-100" : "opacity-50 text-gold"}`}>
-                        Zero Gravity
-                    </span>
-                </label>
-
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -78,20 +57,16 @@ export function ZenGravitySection() {
                     {[1, 2, 3].map((item) => (
                         <motion.div
                             key={item}
-                            animate={
-                                gravityOff
-                                    ? {
-                                        y: [0, -20, 0],
-                                        rotate: [0, 1, -1, 0],
-                                        transition: {
-                                            duration: 4 + item, // Staggered float duration
-                                            repeat: Infinity,
-                                            ease: "easeInOut",
-                                            delay: item * 0.5,
-                                        },
-                                    }
-                                    : { y: 0, rotate: 0 }
-                            }
+                            animate={{
+                                y: [0, -20, 0],
+                                rotate: [0, 1, -1, 0],
+                                transition: {
+                                    duration: 4 + item, // Staggered float duration
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                    delay: item * 0.5,
+                                },
+                            }}
                             whileHover={{ scale: 1.05 }}
                             className="bg-white/60 backdrop-blur-sm border border-charcoal/10 p-8 rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all"
                         >
