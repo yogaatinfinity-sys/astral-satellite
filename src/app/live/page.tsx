@@ -197,8 +197,8 @@ export default function LivePage() {
                                     <Lock size={48} />
                                 </div>
                                 <h2 className="text-4xl font-serif text-charcoal mb-4 italic">Registration Required</h2>
-                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 mb-10">
-                                    <p className="text-red-500 font-serif text-xl leading-relaxed">
+                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 mb-10 w-full overflow-hidden">
+                                    <p className="text-red-500 font-serif text-xl leading-relaxed break-all">
                                         Email <span className="font-bold underline">{emailInput || verifiedEmail}</span> is not registered for live classes.
                                     </p>
                                 </div>
@@ -279,10 +279,10 @@ export default function LivePage() {
                                 <motion.div
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
-                                    className="inline-flex items-center gap-2 mb-6 px-4 py-1 rounded-full bg-green-50 text-green-600 border border-green-100"
+                                    className="inline-flex items-center gap-2 mb-6 px-4 py-1 rounded-full bg-green-50 text-green-600 border border-green-100 max-w-full"
                                 >
-                                    <CheckCircle2 size={16} />
-                                    <span className="text-xs font-bold uppercase tracking-widest leading-none pt-0.5">Verified: {verifiedEmail}</span>
+                                    <CheckCircle2 size={16} className="shrink-0" />
+                                    <span className="text-xs font-bold uppercase tracking-widest leading-none pt-0.5 truncate shrink">Verified: {verifiedEmail}</span>
                                 </motion.div>
                                 <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight text-charcoal italic">
                                     Virtual Sanctuary

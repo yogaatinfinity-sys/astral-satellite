@@ -464,20 +464,20 @@ export default function AdminDashboard() {
                                                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#6fcbcc]/10 flex-shrink-0 flex items-center justify-center text-[#6fcbcc] font-bold text-lg border border-[#6fcbcc]/20">
                                                     {(member.full_name || member.email || "S")[0].toUpperCase()}
                                                 </div>
-                                                <div className="min-w-0 flex-1">
+                                                <div className="min-w-0 flex-[1_1_0%] overflow-hidden">
                                                     <p className="font-bold text-lg text-charcoal truncate w-full">
                                                         {member.full_name || "Unknown Student"}
                                                     </p>
                                                     <p className="text-sm text-charcoal/40 font-medium truncate w-full flex items-center gap-1.5 mt-0.5">
-                                                        <Mail size={14} /> {member.email}
+                                                        <Mail size={14} className="shrink-0" /> <span className="truncate">{member.email}</span>
                                                     </p>
                                                 </div>
                                             </div>
 
                                             {/* Phone (col-span-12 md:col-span-3) */}
-                                            <div className="flex items-center gap-2 text-sm text-charcoal/60 md:col-span-3 font-medium">
-                                                <Phone size={14} className="text-[#6fcbcc]" />
-                                                {member.phone_number || "No Phone"}
+                                            <div className="flex items-center gap-2 text-sm text-charcoal/60 md:col-span-3 font-medium min-w-0 truncate">
+                                                <Phone size={14} className="text-[#6fcbcc] shrink-0" />
+                                                <span className="truncate">{member.phone_number || "No Phone"}</span>
                                             </div>
 
                                             {/* Mode Toggle (col-span-12 md:col-span-2) */}
@@ -642,7 +642,9 @@ export default function AdminDashboard() {
 
                             <div className="mb-8 pr-12">
                                 <p className="text-[#6fcbcc] font-bold tracking-widest uppercase text-xs mb-2">Attendance Timeline</p>
-                                <h3 className="text-3xl font-serif text-charcoal leading-none">{historyModalMember.full_name || historyModalMember.email}</h3>
+                                <h3 className="text-3xl font-serif text-charcoal flex flex-col gap-1">
+                                    <span className="break-all leading-tight">{historyModalMember.full_name || historyModalMember.email}</span>
+                                </h3>
                             </div>
 
                             <div className="overflow-y-auto pr-2 space-y-4 flex-1 styling-scrollbar">
