@@ -133,7 +133,7 @@ export function HeroSection() {
                         className="relative w-[280px] h-[400px] sm:w-[350px] sm:h-[500px] md:w-[450px] md:h-[650px] rounded-[3rem] transition-colors duration-500 hover:bg-[#FFD700]/20 group flex items-center justify-center p-4 cursor-pointer"
                     >
                         <Image
-                            src="/hero-image.png"
+                            src="/hero.jpeg"
                             alt="Yoga Subject Meditating"
                             fill
                             priority
