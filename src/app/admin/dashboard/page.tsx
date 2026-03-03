@@ -469,7 +469,7 @@ export default function AdminDashboard() {
                                                         {member.full_name || "Unknown Student"}
                                                     </p>
                                                     <p className="text-sm text-charcoal/40 font-medium truncate w-full flex items-center gap-1.5 mt-0.5">
-                                                        <Mail size={14} className="shrink-0" /> <span className="truncate">{member.email}</span>
+                                                        <Mail size={14} className="shrink-0" /> <span className="truncate min-w-[150px]">{member.email}</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -477,7 +477,7 @@ export default function AdminDashboard() {
                                             {/* Phone (col-span-12 md:col-span-3) */}
                                             <div className="flex items-center gap-2 text-sm text-charcoal/60 md:col-span-3 font-medium min-w-0 truncate">
                                                 <Phone size={14} className="text-[#6fcbcc] shrink-0" />
-                                                <span className="truncate">{member.phone_number || "No Phone"}</span>
+                                                <span className="truncate min-w-[120px]">{member.phone_number || "No Phone"}</span>
                                             </div>
 
                                             {/* Mode Toggle (col-span-12 md:col-span-2) */}

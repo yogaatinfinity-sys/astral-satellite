@@ -26,7 +26,7 @@ const pillars = [
 
 export function WhyYogaSection() {
     return (
-        <section className="py-20 bg-gradient-to-b from-white to-[#FAFAEE] relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-white to-[#FAFAEE] relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <style jsx>{`
                     @keyframes float {

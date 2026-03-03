@@ -188,7 +188,8 @@ export default function LivePage() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-[#6fcbcc]/10 max-w-xl w-full"
+                        className="bg-white p-6 px-4 md:p-16 md:px-12 rounded-[3rem] shadow-2xl border border-[#6fcbcc]/10 max-w-xl w-full"
+                        style={{ maxWidth: '100%' }}
                     >
                         {!isMember && isMember !== null ? (
                             /* State: Email entered but NOT FOUND */
@@ -197,9 +198,9 @@ export default function LivePage() {
                                     <Lock size={48} />
                                 </div>
                                 <h2 className="text-4xl font-serif text-charcoal mb-4 italic">Registration Required</h2>
-                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 mb-10 w-full overflow-hidden">
-                                    <p className="text-red-500 font-serif text-xl leading-relaxed break-all">
-                                        Email <span className="font-bold underline">{emailInput || verifiedEmail}</span> is not registered for live classes.
+                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 px-4 md:px-6 mb-10 w-full" style={{ maxWidth: '100%' }}>
+                                    <p className="text-red-500 font-serif text-xl leading-relaxed">
+                                        Email <span className="font-bold underline" style={{ overflowWrap: 'break-word', wordBreak: 'break-all', display: 'inline-block', maxWidth: '100%' }}>{emailInput || verifiedEmail}</span> is not registered for live classes.
                                     </p>
                                 </div>
                                 <p className="text-charcoal/60 mb-10 text-lg">

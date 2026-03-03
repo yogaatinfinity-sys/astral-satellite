@@ -130,11 +130,11 @@ export function HeroSection() {
                     <motion.div
                         animate={{ y: [0, -20, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-[280px] h-[350px] sm:w-[350px] sm:h-[450px] md:w-[450px] md:h-[550px] rounded-[3rem] overflow-hidden"
+                        className="relative w-[calc(100%-2rem)] aspect-[16/9] md:w-[450px] md:aspect-auto md:h-[400px] lg:h-[400px] rounded-[3rem] overflow-hidden mx-auto"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1200"
-                            alt="Yoga session"
+                            src="https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1200"
+                            alt="Yoga outdoors at sunset"
                             fill
                             priority
                             className="object-cover"
