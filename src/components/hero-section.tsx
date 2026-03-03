@@ -128,16 +128,16 @@ export function HeroSection() {
                     className="relative w-full flex justify-center lg:justify-end pr-0 lg:pr-12"
                 >
                     <motion.div
-                        animate={{ y: [0, -15, 0] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-[280px] h-[400px] sm:w-[350px] sm:h-[500px] md:w-[450px] md:h-[650px]"
+                        animate={{ y: [0, -20, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        className="relative w-[280px] h-[400px] sm:w-[350px] sm:h-[500px] md:w-[450px] md:h-[650px] rounded-[3rem] transition-colors duration-500 hover:bg-[#FFD700]/20 group flex items-center justify-center p-4 cursor-pointer"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&q=80&w=1200"
-                            alt="Serene Yoga Subject"
+                            src="/hero-image.png"
+                            alt="Yoga Subject Meditating"
                             fill
                             priority
-                            className="object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
+                            className="object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.12)] group-hover:scale-105 transition-all duration-500 group-hover:drop-shadow-[0_20px_60px_rgba(255,215,0,0.4)]"
                         />
                     </motion.div>
                 </motion.div>
