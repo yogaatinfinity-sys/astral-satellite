@@ -58,7 +58,7 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 h-24 flex items-center",
+                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 h-28 flex items-center",
                 scrolled ? "bg-soft-bone/80 backdrop-blur-md shadow-sm" : "bg-transparent"
             )}
         >
@@ -68,9 +68,9 @@ export function Navbar() {
                     <Image
                         src="/logo.svg"
                         alt="Yoga Infinity Logo"
-                        width={100}
-                        height={100}
-                        className="h-[70px] md:h-[100px] w-auto mix-blend-multiply object-contain"
+                        width={110}
+                        height={110}
+                        className="h-[80px] md:h-[110px] w-auto mix-blend-multiply object-contain"
                         priority={true}
                         unoptimized={true}
                     />
