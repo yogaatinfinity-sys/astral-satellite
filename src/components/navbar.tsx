@@ -68,9 +68,9 @@ export function Navbar() {
                     <Image
                         src="/logo.svg"
                         alt="Yoga Infinity Logo"
-                        width={65}
-                        height={65}
-                        className="h-[45px] md:h-[65px] w-auto mix-blend-multiply object-contain"
+                        width={85}
+                        height={85}
+                        className="h-[60px] md:h-[85px] w-auto mix-blend-multiply object-contain"
                         priority={true}
                     />
                 </Link>
