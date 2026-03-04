@@ -67,10 +67,11 @@ export function Navbar() {
                 <Link href="/" className="flex items-center gap-3 z-50 pl-4 md:pl-8">
                     <Image
                         src="/logo.svg"
-                        alt="Yoga Infinity Logo"
+                        alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        className="h-[75px] md:h-[105px] w-auto object-contain"
+                        className="h-[80px] md:h-[110px] w-auto object-contain"
+                        style={{ filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }}
                         priority={true}
                         unoptimized={true}
                     />
