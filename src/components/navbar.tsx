@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
@@ -63,8 +64,15 @@ export function Navbar() {
         >
             <div className="max-w-7xl mx-auto w-full relative flex items-center justify-between">
                 {/* Logo (Left for both Desktop and Mobile) */}
-                <Link href="/" className="flex items-center gap-3 z-50">
-                    <img src="/logo.png" alt="Yoga @ Infinity Logo" className="h-12 md:h-16 w-auto mix-blend-multiply object-contain" />
+                <Link href="/" className="flex items-center gap-3 z-50 pl-4 md:pl-8">
+                    <Image
+                        src="/logo.svg"
+                        alt="Yoga Infinity Logo"
+                        width={65}
+                        height={65}
+                        className="h-[45px] md:h-[65px] w-auto mix-blend-multiply object-contain"
+                        priority={true}
+                    />
                 </Link>
 
                 {/* Desktop Menu (Centered) */}
