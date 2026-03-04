@@ -70,7 +70,7 @@ export function Navbar() {
                         alt="Yoga Infinity Logo"
                         width={110}
                         height={110}
-                        className="h-[80px] md:h-[110px] w-auto mix-blend-multiply object-contain"
+                        className="h-[75px] md:h-[105px] w-auto object-contain"
                         priority={true}
                         unoptimized={true}
                     />

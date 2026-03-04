@@ -133,12 +133,13 @@ export function HeroSection() {
                         className="relative w-[calc(100%-2rem)] aspect-[16/9] md:w-[450px] md:aspect-auto md:h-[400px] lg:h-[400px] rounded-[3rem] overflow-hidden mx-auto"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1200"
+                            src="/assets/icons/front-meditation.jpg"
                             alt="Yoga outdoors at sunset"
                             fill
                             priority
                             className="object-cover"
                         />
+                        <div className="absolute inset-0 bg-black/30 rounded-[3rem]" />
                     </motion.div>
                 </motion.div>
             </div>
