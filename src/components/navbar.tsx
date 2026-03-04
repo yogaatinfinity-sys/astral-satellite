@@ -58,7 +58,7 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 h-20 flex items-center",
+                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 py-2 flex items-center min-h-[80px]",
                 scrolled ? "bg-soft-bone/80 backdrop-blur-md shadow-sm" : "bg-transparent"
             )}
         >
