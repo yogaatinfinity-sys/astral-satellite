@@ -52,7 +52,10 @@ export function ContactSection() {
                             </div>
                             <div>
                                 <h4 className="font-bold text-charcoal">Visit Us</h4>
-                                <p className="text-charcoal/60">123 Serenity Lane, Wellness District</p>
+                                <a href="https://maps.app.goo.gl/3GfX1Fh7v2nB1y2b8" target="_blank" rel="noopener noreferrer" className="text-charcoal/60 hover:text-brand-primary transition-colors block mt-1">
+                                    Thirumalai St, Venkateswara Nagar, Oragadam,<br />
+                                    Chennai, Tamil Nadu 600053
+                                </a>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
@@ -61,7 +64,9 @@ export function ContactSection() {
                             </div>
                             <div>
                                 <h4 className="font-bold text-charcoal">Call Us</h4>
-                                <p className="text-charcoal/60">+91 98409 41300</p>
+                                <a href="tel:+919840941300" className="text-charcoal/60 hover:text-brand-primary transition-colors block mt-1">
+                                    +91 98409 41300
+                                </a>
                             </div>
                         </div>
                     </div>

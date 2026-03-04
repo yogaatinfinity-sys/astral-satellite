@@ -90,13 +90,13 @@ export function ZenGravitySection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center max-w-3xl mb-16"
+                    className="text-center max-w-3xl mx-auto mb-12"
                 >
                     <h2 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
-                        Aerial Yoga & Services
+                        The Infinity Collection
                     </h2>
                     <p className="text-charcoal/70 text-lg md:text-xl leading-relaxed">
-                        Experience the freedom of flight. Suspend your practice, decompress your spine, and find balance in the air.
+                        Explore our diverse range of yoga practices tailored for every body and every goal.
                     </p>
                 </motion.div>
 
