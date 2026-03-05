@@ -48,8 +48,7 @@ export function Navbar() {
     }, [])
 
     const navLinks = [
-        { href: "/#services", label: "Classes" },
-        { href: "/#zen-gravity", label: "Aerial Yoga" },
+        { href: "/#zen-gravity", label: "The Collection" },
         { href: "/live", label: "Live Studio" },
         { href: "/#testimonials", label: "Stories" },
         { href: "/#contact", label: "Contact" },

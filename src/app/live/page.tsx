@@ -153,12 +153,12 @@ export default function LivePage() {
     }
 
     const schedule = [
-        { day: "Monday", time: "07:00 AM", class: "Vinyasa Flow", instructor: "Sarah" },
-        { day: "Tuesday", time: "06:00 PM", class: "Aerial Basics", instructor: "Mike" },
-        { day: "Wednesday", time: "07:00 AM", class: "Power Yoga", instructor: "Sarah" },
-        { day: "Thursday", time: "06:00 PM", class: "Restorative Aerial", instructor: "Jessica" },
-        { day: "Friday", time: "08:00 AM", class: "Morning Zen", instructor: "David" },
-        { day: "Saturday", time: "09:00 AM", class: "Community Flow", instructor: "All" },
+        { day: "Monday", time: "09:00 AM - 11:00 AM", class: "Vinyasa Flow", instructor: "Sarah" },
+        { day: "Tuesday", time: "09:00 AM - 11:00 AM", class: "Aerial Basics", instructor: "Mike" },
+        { day: "Wednesday", time: "09:00 AM - 11:00 AM", class: "Power Yoga", instructor: "Sarah" },
+        { day: "Thursday", time: "09:00 AM - 11:00 AM", class: "Restorative Aerial", instructor: "Jessica" },
+        { day: "Friday", time: "09:00 AM - 11:00 AM", class: "Morning Zen", instructor: "David" },
+        { day: "Saturday", time: "09:00 AM - 11:00 AM", class: "Community Flow", instructor: "All" },
     ]
 
     return (
@@ -188,8 +188,7 @@ export default function LivePage() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="bg-white p-6 px-4 md:p-16 md:px-12 rounded-[3rem] shadow-2xl border border-[#6fcbcc]/10 max-w-xl w-full"
-                        style={{ maxWidth: '100%' }}
+                        className="bg-white p-6 px-4 md:p-16 md:px-12 rounded-[3rem] shadow-2xl border border-[#6fcbcc]/10 max-w-xl w-full mx-auto"
                     >
                         {!isMember && isMember !== null ? (
                             /* State: Email entered but NOT FOUND */
@@ -198,9 +197,9 @@ export default function LivePage() {
                                     <Lock size={48} />
                                 </div>
                                 <h2 className="text-4xl font-serif text-charcoal mb-4 italic">Registration Required</h2>
-                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 px-4 md:px-6 mb-10 w-full" style={{ maxWidth: '100%' }}>
-                                    <p className="text-red-500 font-serif text-xl leading-relaxed">
-                                        Email <span className="font-bold underline" style={{ overflowWrap: 'break-word', wordBreak: 'break-all', display: 'inline-block', maxWidth: '100%' }}>{emailInput || verifiedEmail}</span> is not registered for live classes.
+                                <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 px-4 md:px-6 mb-10 w-full">
+                                    <p className="text-red-500 font-serif text-xl leading-relaxed break-words">
+                                        Email <span className="font-bold underline">{emailInput || verifiedEmail}</span> is not registered for live classes.
                                     </p>
                                 </div>
                                 <p className="text-charcoal/60 mb-10 text-lg">
