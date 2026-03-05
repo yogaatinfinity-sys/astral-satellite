@@ -387,18 +387,18 @@ export default function LivePage() {
                             <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">My Progress</h2>
                             <p className="text-charcoal/60 mb-10 text-lg">Enter your registered phone number to view your practice history.</p>
 
-                            <form onSubmit={handleCheckProgress} className="relative max-w-md mx-auto mb-10">
+                            <form onSubmit={handleCheckProgress} className="flex flex-col sm:relative sm:block max-w-md mx-auto mb-10 gap-3">
                                 <input
                                     type="tel"
                                     placeholder="Enter your phone number..."
                                     value={progressPhone}
                                     onChange={(e) => setProgressPhone(e.target.value)}
-                                    className="w-full h-14 rounded-full border-2 border-[#6fcbcc]/20 text-center px-6 focus:ring-4 focus:ring-[#6fcbcc]/10 focus:border-[#6fcbcc] bg-[#FAFAEE] outline-none transition-all font-medium text-charcoal"
+                                    className="w-full h-14 rounded-full border-2 border-[#6fcbcc]/20 text-center sm:text-left sm:pl-6 sm:pr-[120px] px-4 focus:ring-4 focus:ring-[#6fcbcc]/10 focus:border-[#6fcbcc] bg-[#FAFAEE] outline-none transition-all font-medium text-charcoal"
                                 />
                                 <Button
                                     type="submit"
                                     disabled={progressLoading || !progressPhone}
-                                    className="absolute right-1 top-1 h-12 rounded-full bg-[#6fcbcc] text-white px-6 font-bold hover:bg-[#5bb8b9] transition-colors shadow-sm disabled:opacity-50"
+                                    className="sm:absolute sm:right-1 sm:top-1 h-14 sm:h-12 w-full sm:w-auto mt-2 sm:mt-0 rounded-full bg-[#6fcbcc] text-white px-6 font-bold hover:bg-[#5bb8b9] transition-colors shadow-sm disabled:opacity-50"
                                 >
                                     {progressLoading ? "Checking..." : "Inspect"}
                                 </Button>
