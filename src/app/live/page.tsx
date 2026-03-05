@@ -165,7 +165,7 @@ export default function LivePage() {
         <main className="min-h-screen bg-[#FAFAEE] selection:bg-[#6fcbcc] selection:text-white pb-20">
             <Navbar />
 
-            <div className="pt-32 px-6 md:px-12 max-w-7xl mx-auto flex justify-end mb-4">
+            <div className="pt-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex justify-end mb-4">
                 {verifiedEmail && isMember && (
                     <Button
                         onClick={handleReset}
@@ -271,7 +271,7 @@ export default function LivePage() {
                     transition={{ duration: 0.8 }}
                 >
                     {/* Hero Section */}
-                    <section className="py-16 px-6 md:px-12 bg-[#FAFAEE] text-charcoal relative overflow-hidden">
+                    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#FAFAEE] text-charcoal relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#6fcbcc]/20 via-[#FAFAEE] to-[#FAFAEE] opacity-60" />
 
                         <div className="max-w-7xl mx-auto relative z-10">
@@ -296,9 +296,9 @@ export default function LivePage() {
                     </section>
 
                     {/* Join Section */}
-                    <section className="pb-16 px-6 md:px-12 relative z-20">
+                    <section className="pb-16 px-4 sm:px-6 lg:px-8 relative z-20">
                         <div className="max-w-4xl mx-auto">
-                            <div className="bg-white rounded-[2rem] shadow-2xl p-10 border border-[#6fcbcc]/10">
+                            <div className="bg-white rounded-[2rem] shadow-2xl p-6 md:p-10 border border-[#6fcbcc]/10">
                                 <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-6">
@@ -308,7 +308,7 @@ export default function LivePage() {
                                             </span>
                                             <span className="text-red-500 font-bold uppercase tracking-[0.2em] text-sm">Live Stream Active</span>
                                         </div>
-                                        <h3 className="text-3xl md:text-4xl font-bold font-serif text-slate-800 mb-4">Morning Infinity Flow</h3>
+                                        <h3 className="text-2xl md:text-4xl font-bold font-serif text-slate-800 mb-4 break-words">Morning Infinity Flow</h3>
                                         <div className="flex flex-wrap items-center gap-6 text-slate-600 font-medium text-lg">
                                             <span className="flex items-center gap-2"><Clock size={20} className="text-[#6fcbcc]" /> 09:00 AM - 11:00 AM IST</span>
                                             <span className="flex items-center gap-2"><Users size={20} className="text-[#6fcbcc]" /> Sharmila</span>
@@ -322,7 +322,7 @@ export default function LivePage() {
                                             rel="noopener noreferrer"
                                             onClick={handleOnlineCheckIn}
                                             style={{ backgroundColor: "#6fcbcc" }}
-                                            className="inline-flex items-center justify-center hover:scale-105 text-white rounded-full px-12 py-4 text-2xl shadow-2xl transition-all w-full font-bold group"
+                                            className="inline-flex items-center justify-center hover:scale-105 text-white rounded-full px-12 py-4 text-2xl shadow-2xl transition-all w-full md:w-auto font-bold group"
                                         >
                                             <Video className="mr-3 group-hover:rotate-12 transition-transform" size={28} /> Join Now
                                         </a>
@@ -342,7 +342,7 @@ export default function LivePage() {
                     </section>
 
                     {/* Schedule Section */}
-                    <section className="py-20 px-6 md:px-12 bg-transparent">
+                    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">Studio Schedule</h2>
@@ -382,7 +382,7 @@ export default function LivePage() {
                         </div>
                     </section>
                     {/* My Progress Checker Section */}
-                    <section className="py-20 px-6 md:px-12 bg-white relative z-20 border-t border-[#6fcbcc]/10">
+                    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative z-20 border-t border-[#6fcbcc]/10">
                         <div className="max-w-3xl mx-auto text-center">
                             <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">My Progress</h2>
                             <p className="text-charcoal/60 mb-10 text-lg">Enter your registered phone number to view your practice history.</p>

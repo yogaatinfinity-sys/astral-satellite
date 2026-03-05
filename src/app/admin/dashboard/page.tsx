@@ -199,7 +199,7 @@ export default function AdminDashboard() {
         <main className="min-h-screen bg-[#FAFAEE] text-charcoal overflow-x-hidden w-full box-border">
             <Navbar />
 
-            <div className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+            <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
                     <div>
                         <motion.div

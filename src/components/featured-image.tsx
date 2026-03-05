@@ -6,7 +6,7 @@ import Image from "next/image"
 export function FeaturedImage() {
     return (
         <section className="py-12 md:py-24 bg-soft-bone">
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}

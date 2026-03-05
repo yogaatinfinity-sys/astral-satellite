@@ -85,7 +85,7 @@ export function ZenGravitySection() {
                 className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"
             />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

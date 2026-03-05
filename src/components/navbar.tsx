@@ -23,6 +23,12 @@ export function Navbar() {
         handleScroll() // Initialize state correctly on hard refresh
         window.addEventListener("scroll", handleScroll)
 
+        if (isOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = ""
+        }
+
         const checkAdminSession = async () => {
             const { data: { session } } = await supabase.auth.getSession()
             if (session?.user?.email === ADMIN_EMAIL) {
@@ -45,8 +51,9 @@ export function Navbar() {
         return () => {
             window.removeEventListener("scroll", handleScroll)
             subscription.unsubscribe()
+            document.body.style.overflow = ""
         }
-    }, [])
+    }, [isOpen])
 
     const navLinks = [
         { href: "/#zen-gravity", label: "The Collection" },
@@ -70,7 +77,7 @@ export function Navbar() {
                         alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        className="h-[80px] md:h-[115px] w-auto object-contain"
+                        className="h-[50px] md:h-[80px] lg:h-[115px] w-auto object-contain"
                         style={{ filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }}
                         priority={true}
                         unoptimized={true}

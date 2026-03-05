@@ -36,14 +36,14 @@ const services: ServiceProps[] = [
 export function ServicesSection() {
     return (
         <section id="services" className="py-20 md:py-32 bg-soft-bone/50 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-5xl font-serif text-charcoal mb-4 font-bold"
+                        className="text-3xl md:text-5xl font-serif text-charcoal mb-4 font-bold"
                     >
                         Our Classes
                     </motion.h2>

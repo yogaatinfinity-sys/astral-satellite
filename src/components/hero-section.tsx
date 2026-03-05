@@ -50,7 +50,7 @@ export function HeroSection() {
             {/* Background patterns or subtle gradients */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-soft-bone to-soft-bone opacity-50 pointer-events-none" />
 
-            <div className="z-10 w-full max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -68,7 +68,7 @@ export function HeroSection() {
                     <motion.h1
                         variants={itemVariants}
                         transition={itemTransition}
-                        className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6"
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6"
                     >
                         Find Your <br className="hidden sm:block" />
                         <span className="relative inline-block">

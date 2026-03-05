@@ -7,7 +7,7 @@ export function Footer() {
             {/* Subtle pattern or gradient */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-brand-primary/10 to-transparent opacity-40 pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10 w-full">
                 {/* Brand Column */}
                 <div className="text-center md:text-left md:max-w-[30%] flex flex-col items-center md:items-start">
                     <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
