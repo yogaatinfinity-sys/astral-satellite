@@ -83,7 +83,7 @@ export function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-charcoal/80 hover:text-gold transition-colors font-medium text-sm tracking-wide whitespace-nowrap"
+                            className="text-sm font-semibold hover:text-teal-600 transition-colors tracking-wide whitespace-nowrap"
                         >
                             {link.label}
                         </Link>
@@ -96,13 +96,13 @@ export function Navbar() {
                         <Button
                             variant="primary"
                             size="sm"
-                            className="bg-transparent border border-[#6fcbcc] text-[#6fcbcc] hover:bg-[#6fcbcc] hover:text-white"
+                            className="bg-transparent border border-[#6fcbcc] text-[#6fcbcc] hover:bg-[#6fcbcc] hover:text-white font-bold tracking-wide"
                         >
                             Manage Studio
                         </Button>
                     </Link>
-                    <Button variant="primary" size="sm" onClick={() => {
-                        const message = encodeURIComponent("Namaste! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
+                    <Button variant="primary" size="sm" className="font-bold tracking-wide" onClick={() => {
+                        const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")
                     }}>
                         Book a Class
@@ -133,7 +133,7 @@ export function Navbar() {
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-3xl font-serif text-charcoal hover:text-brand-primary transition-colors tracking-tight"
+                                    className="text-3xl font-semibold hover:text-teal-600 transition-colors tracking-tight"
                                 >
                                     {link.label}
                                 </a>
@@ -144,13 +144,13 @@ export function Navbar() {
                             <Link
                                 href={adminPath}
                                 onClick={() => setIsOpen(false)}
-                                className="w-full text-center text-lg font-medium text-[#6fcbcc] border border-[#6fcbcc]/30 px-6 py-4 rounded-full bg-white/50 backdrop-blur-sm shadow-sm active:scale-[0.98] transition-all"
+                                className="w-full text-center text-lg font-bold tracking-wide text-[#6fcbcc] border border-[#6fcbcc]/30 px-6 py-4 rounded-full bg-white/50 backdrop-blur-sm shadow-sm active:scale-[0.98] transition-all"
                             >
                                 Manage Studio
                             </Link>
                             <Button
                                 size="lg"
-                                className="w-full rounded-full py-7 text-lg bg-[#6fcbcc] shadow-lg shadow-[#6fcbcc]/20"
+                                className="w-full rounded-full py-7 text-lg bg-[#6fcbcc] shadow-lg shadow-[#6fcbcc]/20 font-bold tracking-wide"
                                 onClick={() => {
                                     const message = encodeURIComponent("Namaste! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                                     window.open(`https://wa.me/919840941300?text=${message}`, "_blank");

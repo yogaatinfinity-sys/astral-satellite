@@ -43,7 +43,7 @@ export function WhyYogaSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight"
+                        className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800"
                     >
                         Why Yoga? Why Now?
                     </motion.h2>
@@ -100,10 +100,10 @@ export function WhyYogaSection() {
                                     />
                                 </div>
                             </motion.div>
-                            <h3 className={`text-2xl font-bold mb-4 tracking-tight transition-colors duration-300 ${index === 1 ? 'text-charcoal group-hover:text-[#f8b4a6]' : 'text-charcoal group-hover:text-brand-primary'
+                            <h4 className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${index === 1 ? 'text-teal-600 group-hover:text-[#f8b4a6]' : 'text-teal-600 group-hover:text-brand-primary'
                                 }`}>
                                 {pillar.title}
-                            </h3>
+                            </h4>
                             <p className="text-charcoal/60 leading-relaxed max-w-[300px]">
                                 {pillar.description}
                             </p>

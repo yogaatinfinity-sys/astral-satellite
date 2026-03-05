@@ -39,7 +39,7 @@ export function ContactSection() {
         <section id="contact" className="py-24 bg-white relative">
             <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="text-5xl font-serif text-charcoal mb-6">Begin Your Journey</h2>
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">Begin Your Journey</h2>
                     <p className="text-charcoal/60 text-lg mb-8 leading-relaxed">
                         We'd love to hear from you. Whether you have a question about class schedules,
                         membership options, or just want to say hello, our team is here to help.
@@ -51,8 +51,8 @@ export function ContactSection() {
                                 📍
                             </div>
                             <div>
-                                <h4 className="font-bold text-charcoal">Visit Us</h4>
-                                <a href="https://maps.app.goo.gl/3GfX1Fh7v2nB1y2b8" target="_blank" rel="noopener noreferrer" className="text-charcoal/60 hover:text-brand-primary transition-colors block mt-1">
+                                <h4 className="text-sm font-bold uppercase tracking-widest text-teal-600">Visit Us</h4>
+                                <a href="https://www.google.com/maps/place/Yoga@infinity/@13.1298795,80.1469006,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263b03fab2409:0xf134aade5edbe9ad!8m2!3d13.1298795!4d80.1494755!16s%2Fg%2F11k9k88dg3?entry=ttu&g_ep=EgoyMDI2MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-charcoal/60 hover:text-brand-primary transition-colors block mt-1">
                                     Thirumalai St, Venkateswara Nagar, Oragadam,<br />
                                     Chennai, Tamil Nadu 600053
                                 </a>
@@ -63,7 +63,7 @@ export function ContactSection() {
                                 📞
                             </div>
                             <div>
-                                <h4 className="font-bold text-charcoal">Call Us</h4>
+                                <h4 className="text-sm font-bold uppercase tracking-widest text-teal-600">Call Us</h4>
                                 <a href="tel:+919840941300" className="text-charcoal/60 hover:text-brand-primary transition-colors block mt-1">
                                     +91 98409 41300
                                 </a>
@@ -129,7 +129,7 @@ export function ContactSection() {
                                 </div>
                                 <Button
                                     type="submit"
-                                    className="w-full py-6 text-lg rounded-full bg-brand-primary hover:bg-brand-primary/90 text-white shadow-lg shadow-brand-primary/20 transition-all group"
+                                    className="w-full py-6 text-lg rounded-full bg-brand-primary hover:bg-brand-primary/90 text-white shadow-lg shadow-brand-primary/20 transition-all group font-bold tracking-wide"
                                 >
                                     <span className="flex items-center gap-2">
                                         Send Message <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

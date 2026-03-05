@@ -68,7 +68,7 @@ export function HeroSection() {
                     <motion.h1
                         variants={itemVariants}
                         transition={itemTransition}
-                        className="font-serif text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-charcoal leading-[1.1] mb-6"
+                        className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6"
                     >
                         Find Your <br className="hidden sm:block" />
                         <span className="relative inline-block">
@@ -86,7 +86,7 @@ export function HeroSection() {
                     <motion.p
                         variants={itemVariants}
                         transition={itemTransition}
-                        className="text-charcoal/70 text-base md:text-lg lg:text-xl max-w-xl mb-10 leading-relaxed"
+                        className="text-lg md:text-xl font-light text-slate-500 max-w-2xl mb-10"
                     >
                         A sanctuary for mind, body, and soul. Discover the transformative power of yoga in a space designed for complete tranquility.
                     </motion.p>
@@ -98,7 +98,7 @@ export function HeroSection() {
                     >
                         <Button
                             size="lg"
-                            className="rounded-full bg-[#6fcbcc] hover:bg-[#5bb0b1] text-white shadow-lg shadow-[#6fcbcc]/20 transition-all duration-300"
+                            className="rounded-full bg-[#6fcbcc] hover:bg-[#5bb0b1] text-white shadow-lg shadow-[#6fcbcc]/20 transition-all duration-300 font-bold tracking-wide"
                             onClick={() => {
                                 const el = document.getElementById('contact');
                                 el?.scrollIntoView({ behavior: 'smooth' });
@@ -109,7 +109,7 @@ export function HeroSection() {
                         <Button
                             size="lg"
                             variant="outline"
-                            className="rounded-full border-[#6fcbcc] text-[#6fcbcc] hover:bg-[#6fcbcc]/10 transition-all duration-300"
+                            className="rounded-full border-[#6fcbcc] text-[#6fcbcc] hover:bg-[#6fcbcc]/10 transition-all duration-300 font-bold tracking-wide"
                             onClick={() => {
                                 const el = document.getElementById('zen-gravity');
                                 el?.scrollIntoView({ behavior: 'smooth' });

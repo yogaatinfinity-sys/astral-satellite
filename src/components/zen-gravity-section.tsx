@@ -92,7 +92,7 @@ export function ZenGravitySection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <h2 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">
                         The Infinity Collection
                     </h2>
                     <p className="text-charcoal/70 text-lg md:text-xl leading-relaxed">
@@ -123,14 +123,14 @@ export function ZenGravitySection() {
                                 <div className="h-12 w-12 rounded-full bg-brand-primary/10 text-brand-primary mb-6 flex items-center justify-center">
                                     <service.icon size={24} />
                                 </div>
-                                <h3 className="text-2xl font-serif text-charcoal tracking-tight">{service.title}</h3>
+                                <h3 className="text-xl md:text-2xl font-medium mb-3 text-slate-700">{service.title}</h3>
                                 <p className="text-brand-primary font-medium text-sm mb-4">{service.subtitle}</p>
                                 <p className="text-sm text-charcoal/60 leading-relaxed mb-6 flex-grow">
                                     {service.description}
                                 </p>
                                 <Button
                                     variant="ghost"
-                                    className="text-[#6fcbcc] hover:text-charcoal hover:bg-[#6fcbcc]/10 w-full justify-between group-hover:pl-4 transition-all mt-auto"
+                                    className="text-[#6fcbcc] hover:text-charcoal hover:bg-[#6fcbcc]/10 w-full justify-between group-hover:pl-4 transition-all mt-auto font-bold tracking-wide"
                                     onClick={() => {
                                         const message = encodeURIComponent(`Namaste! I just saw your website and I would like to book a session for ${service.title}. Please let me know the available slots.`);
                                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")

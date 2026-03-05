@@ -22,15 +22,15 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-4 text-sm tracking-wide text-center md:text-right">
-                    <a href="https://maps.app.goo.gl/3GfX1Fh7v2nB1y2b8" target="_blank" rel="noopener noreferrer" className="text-charcoal/70 hover:text-brand-primary transition-colors max-w-xs">
+                    <a href="https://www.google.com/maps/place/Yoga@infinity/@13.1298795,80.1469006,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263b03fab2409:0xf134aade5edbe9ad!8m2!3d13.1298795!4d80.1494755!16s%2Fg%2F11k9k88dg3?entry=ttu&g_ep=EgoyMDI2MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors max-w-xs text-left md:text-right">
                         Thirumalai St, Venkateswara Nagar, Oragadam, Chennai, Tamil Nadu 600053
                     </a>
-                    <a href="tel:+919840941300" className="text-charcoal/70 hover:text-brand-primary transition-colors font-medium">
+                    <a href="tel:+919840941300" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
                         +91 98409 41300
                     </a>
                     <div className="flex gap-6 justify-center md:justify-end mt-2">
-                        <Link href="#" className="hover:text-gold transition-colors">Instagram</Link>
-                        <Link href="#" className="hover:text-gold transition-colors">WhatsApp</Link>
+                        <Link href="#" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Instagram</Link>
+                        <Link href="#" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">WhatsApp</Link>
                     </div>
                 </div>
             </div>
