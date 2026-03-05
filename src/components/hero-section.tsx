@@ -137,6 +137,7 @@ export function HeroSection() {
                             alt="Yoga outdoors at sunset"
                             fill
                             priority
+                            sizes="(max-width: 768px) 100vw, 450px"
                             className="object-cover"
                         />
                     </motion.div>

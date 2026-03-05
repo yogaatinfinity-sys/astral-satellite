@@ -20,6 +20,7 @@ export function Navbar() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20)
         }
+        handleScroll() // Initialize state correctly on hard refresh
         window.addEventListener("scroll", handleScroll)
 
         const checkAdminSession = async () => {

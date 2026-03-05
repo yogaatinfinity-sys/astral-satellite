@@ -18,6 +18,8 @@ export function FeaturedImage() {
                         src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=2000"
                         alt="Serene Yoga Studio Demo"
                         fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                         className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
