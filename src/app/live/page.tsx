@@ -153,13 +153,21 @@ export default function LivePage() {
     }
 
     const schedule = [
-        { day: "Monday", time: "09:00 AM - 11:00 AM", class: "Vinyasa Flow", instructor: "Sarah" },
-        { day: "Tuesday", time: "09:00 AM - 11:00 AM", class: "Aerial Basics", instructor: "Mike" },
-        { day: "Wednesday", time: "09:00 AM - 11:00 AM", class: "Power Yoga", instructor: "Sarah" },
-        { day: "Thursday", time: "09:00 AM - 11:00 AM", class: "Restorative Aerial", instructor: "Jessica" },
-        { day: "Friday", time: "09:00 AM - 11:00 AM", class: "Morning Zen", instructor: "David" },
-        { day: "Saturday", time: "09:00 AM - 11:00 AM", class: "Community Flow", instructor: "All" },
+        { day: "Monday", time: "09:30 AM - 11:00 AM", class: "Hatha Yoga + Pranayama", instructor: "Sharmila & Rekha" },
+        { day: "Tuesday", time: "09:30 AM - 11:00 AM", class: "Flexibility Training + Pranayama", instructor: "Sharmila & Rekha" },
+        { day: "Wednesday", time: "09:30 AM - 11:00 AM", class: "Advance Yoga + Pranayama", instructor: "Sharmila & Rekha" },
+        { day: "Thursday", time: "09:30 AM - 11:00 AM", class: "Dumbbell Yoga + Pranayama", instructor: "Sharmila & Rekha" },
+        { day: "Friday", time: "09:30 AM - 11:00 AM", class: "Strength Training + Pranayama", instructor: "Sharmila & Rekha" },
     ]
+
+    // Determine today's class for the Live Card
+    const currentDayIndex = new Date().getDay(); // 0 is Sunday, 1 is Monday...
+    let todayClass = "Morning Infinity Flow";
+    if (currentDayIndex >= 1 && currentDayIndex <= 5) {
+        todayClass = schedule[currentDayIndex - 1].class;
+    } else {
+        todayClass = "Weekend Self-Practice";
+    }
 
     return (
         <main className="min-h-screen bg-[#FAFAEE] selection:bg-[#6fcbcc] selection:text-white pb-20">
@@ -308,10 +316,10 @@ export default function LivePage() {
                                             </span>
                                             <span className="text-red-500 font-bold uppercase tracking-[0.2em] text-sm">Live Stream Active</span>
                                         </div>
-                                        <h3 className="text-2xl md:text-4xl font-bold font-serif text-slate-800 mb-4 break-words">Morning Infinity Flow</h3>
-                                        <div className="flex flex-wrap items-center gap-6 text-slate-600 font-medium text-lg">
-                                            <span className="flex items-center gap-2"><Clock size={20} className="text-[#6fcbcc]" /> 09:00 AM - 11:00 AM IST</span>
-                                            <span className="flex items-center gap-2"><Users size={20} className="text-[#6fcbcc]" /> Sharmila</span>
+                                        <h3 className="text-2xl md:text-4xl font-bold font-serif text-slate-800 mb-4 break-words">{todayClass}</h3>
+                                        <div className="flex flex-wrap items-center gap-6 text-slate-600 font-medium text-base md:text-lg">
+                                            <span className="flex items-center gap-2"><Clock size={20} className="text-[#0d9488]" /> <span className="text-sm md:text-base">09:30 AM - 11:00 AM IST</span></span>
+                                            <span className="flex items-center gap-2"><Users size={20} className="text-[#0d9488]" /> Sharmila & Rekha</span>
                                         </div>
                                     </div>
 
@@ -378,6 +386,12 @@ export default function LivePage() {
                                         </div>
                                     </motion.div>
                                 ))}
+                            </div>
+
+                            <div className="text-center mt-12 bg-white/50 backdrop-blur-sm p-4 rounded-xl border border-charcoal/5 inline-block mx-auto flex">
+                                <p className="text-charcoal/60 font-medium italic text-sm md:text-base">
+                                    Studio closed on Saturdays & Sundays for self-practice.
+                                </p>
                             </div>
                         </div>
                     </section>
