@@ -102,7 +102,7 @@ export function Navbar() {
                         </Button>
                     </Link>
                     <Button variant="primary" size="sm" className="font-bold tracking-wide" onClick={() => {
-                        const message = encodeURIComponent("");
+                        const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")
                     }}>
                         Book a Class
