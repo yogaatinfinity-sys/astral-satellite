@@ -102,7 +102,7 @@ export function Navbar() {
                         </Button>
                     </Link>
                     <Button variant="primary" size="sm" className="font-bold tracking-wide" onClick={() => {
-                        const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
+                        const message = encodeURIComponent("");
                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")
                     }}>
                         Book a Class
@@ -152,7 +152,7 @@ export function Navbar() {
                                 size="lg"
                                 className="w-full rounded-full py-7 text-lg bg-[#6fcbcc] shadow-lg shadow-[#6fcbcc]/20 font-bold tracking-wide"
                                 onClick={() => {
-                                    const message = encodeURIComponent("Namaste! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
+                                    const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                                     window.open(`https://wa.me/919840941300?text=${message}`, "_blank");
                                     setIsOpen(false);
                                 }}
