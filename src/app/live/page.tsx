@@ -357,9 +357,9 @@ export default function LivePage() {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-sm border-l-[6px] border-[#6fcbcc] flex flex-col md:flex-row items-center justify-between gap-8 group hover:shadow-xl transition-all"
+                                        className="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-sm border-l-[6px] border-[#6fcbcc] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 group hover:shadow-xl transition-all"
                                     >
-                                        <div className="flex items-center gap-10 w-full md:w-auto">
+                                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-10 w-full md:w-auto">
                                             <div className="text-[#6fcbcc] font-semibold text-xl md:text-2xl min-w-[120px]">
                                                 {item.day}
                                             </div>
@@ -369,12 +369,12 @@ export default function LivePage() {
                                             </div>
                                         </div>
 
-                                        <div className="flex items-center gap-8 w-full md:w-auto justify-between md:justify-end">
-                                            <div className="flex items-center gap-3 text-charcoal/80 font-bold text-xl">
-                                                <Clock size={20} className="text-gold" />
-                                                {item.time}
+                                        <div className="flex items-center gap-4 sm:gap-8 w-full md:w-auto justify-between md:justify-end mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-charcoal/5">
+                                            <div className="flex items-center gap-3 text-charcoal/80 font-bold text-lg md:text-xl">
+                                                <Clock size={20} className="text-gold shrink-0" />
+                                                <span className="truncate">{item.time}</span>
                                             </div>
-                                            <ArrowRight size={24} className="text-charcoal/20 group-hover:text-[#6fcbcc] group-hover:translate-x-2 transition-all" />
+                                            <ArrowRight size={24} className="text-charcoal/20 group-hover:text-[#6fcbcc] group-hover:translate-x-2 transition-all shrink-0" />
                                         </div>
                                     </motion.div>
                                 ))}
