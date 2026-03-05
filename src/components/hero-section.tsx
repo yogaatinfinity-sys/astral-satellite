@@ -88,7 +88,7 @@ export function HeroSection() {
                         transition={itemTransition}
                         className="text-lg md:text-xl font-light text-slate-500 max-w-2xl mb-10"
                     >
-                        A sanctuary for mind, body, and soul. Discover the transformative power of yoga in a space designed for complete tranquility.
+                        From foundational Hatha to high-intensity Strength Yoga with dumbbells. Elevate your physical and mental peak in our signature morning flow.
                     </motion.p>
 
                     <motion.div
