@@ -66,7 +66,7 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between py-2",
+                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between py-2 [-webkit-box-shadow:none!important]",
                 scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
             )}
         >
