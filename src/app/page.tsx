@@ -10,27 +10,27 @@ import { WhyYogaSection } from "@/components/why-yoga-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 
-const REVIEWS = [
+const GOOGLE_REVIEWS = [
   {
     id: 1,
-    name: "Priya M.",
-    role: "Student",
+    name: "Sathyaseelan C.",
+    role: "Local Guide",
     stars: 5,
-    comment: "Sharmila's 9-11 AM Morning Infinity Flow has completely transformed my daily routine. Her guidance in Strength Yoga is incredible, building both physical endurance and mental clarity. Highly recommend Yoga @ Infinity!"
+    comment: "Highly recommended place for learning yoga forms. They teach us well based on our comfort and object. Can see gradual progress day-by-day."
   },
   {
     id: 2,
-    name: "Aarti S.",
+    name: "Janani K.",
     role: "Student",
     stars: 5,
-    comment: "The Strength Yoga sessions are challenging yet so rewarding. Sharmila gives personal attention and ensures every posture is correct. The morning classes are the perfect way to begin the day with positivity."
+    comment: "Sharmila is a great instructor. Started with very simple poses and basic breathing techniques and slowly graduated to tougher ones. No pressure, feel very relaxed learning here."
   },
   {
     id: 3,
-    name: "Karthik R.",
-    role: "Student",
+    name: "Rajeshwar R.",
+    role: "Local Guide",
     stars: 5,
-    comment: "I've been attending the Morning Infinity Flow for a few months now, and the progress I've seen is remarkable. The energy in the studio is truly unique, making every class an uplifting experience."
+    comment: "Great place to practice yoga and grow. Opportunity to learn new poses and relax your mind. The wooden flooring and ambiance are perfectly suited for focus."
   }
 ];
 
@@ -44,7 +44,7 @@ export default function Home() {
       <GallerySection />
       <ZenGravitySection />
       <VirtualStudioSection />
-      <TestimonialsSection reviews={REVIEWS} />
+      <TestimonialsSection reviews={GOOGLE_REVIEWS} />
       <ContactSection />
       <Footer />
     </main>

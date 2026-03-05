@@ -48,7 +48,7 @@ export function TestimonialsSection({ reviews }: TestimonialsSectionProps) {
                         </p>
 
                         <a
-                            href="https://www.google.com/maps/place/Yoga@infinity/@13.1298795,80.1469006,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263b03fab2409:0xf134aade5edbe9ad!8m2!3d13.1298795!4d80.1494755"
+                            href="https://search.google.com/local/writereview?placeid=ChIJCSSrP7BjUjoRrenbXt6qNPE"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center bg-[#0d9488] hover:bg-[#0f766e] text-white rounded-full px-8 py-4 text-lg font-bold shadow-lg transition-all"
