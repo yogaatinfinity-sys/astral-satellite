@@ -7,9 +7,9 @@ export function Footer() {
             {/* Subtle pattern or gradient */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-brand-primary/10 to-transparent opacity-40 pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12 relative z-10 w-full">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10 w-full">
                 {/* Brand Column */}
-                <div className="text-center md:text-left md:max-w-[30%]">
+                <div className="text-center md:text-left md:max-w-[30%] flex flex-col items-center md:items-start">
                     <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
                         <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[60px] w-auto object-contain" />
                         <span className="text-xl font-serif font-bold text-charcoal tracking-widest">
@@ -23,7 +23,7 @@ export function Footer() {
                 </div>
 
                 {/* Services Column */}
-                <div className="flex flex-col gap-3 text-center md:text-left text-sm tracking-wide">
+                <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left text-sm tracking-wide">
                     <h4 className="font-bold text-charcoal mb-2">The Infinity Collection</h4>
                     <Link href="#zen-gravity" className="text-slate-500 hover:text-teal-600 transition-colors">Hatha Yoga</Link>
                     <Link href="#zen-gravity" className="text-slate-500 hover:text-teal-600 transition-colors">Flexibility Training</Link>
@@ -34,7 +34,7 @@ export function Footer() {
                 </div>
 
                 {/* Contact Column */}
-                <div className="flex flex-col gap-4 text-sm tracking-wide text-center md:text-right md:max-w-[30%]">
+                <div className="flex flex-col items-center md:items-end gap-4 text-sm tracking-wide text-center md:text-right md:max-w-[30%]">
                     <h4 className="font-bold text-charcoal mb-2">Connect With Us</h4>
                     <a href="https://www.google.com/maps/place/Yoga@infinity/@13.1298795,80.1469006,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263b03fab2409:0xf134aade5edbe9ad!8m2!3d13.1298795!4d80.1494755!16s%2Fg%2F11k9k88dg3?entry=ttu&g_ep=EgoyMDI2MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors text-center md:text-right block">
                         Thirumalai St, Venkateswara Nagar, Oragadam, Chennai, Tamil Nadu 600053
