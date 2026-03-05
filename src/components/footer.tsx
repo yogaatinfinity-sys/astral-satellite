@@ -9,9 +9,9 @@ export function Footer() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10 w-full">
                 {/* Brand Column */}
-                <div className="text-center md:text-left md:max-w-[30%] flex flex-col items-center md:items-start">
-                    <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-                        <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[60px] w-auto object-contain" />
+                <div className="text-left md:max-w-[30%] flex flex-col items-start">
+                    <div className="flex items-center gap-3 justify-start mb-4">
+                        <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[75px] md:h-[60px] w-auto object-contain" />
                         <span className="text-xl font-serif font-bold text-charcoal tracking-widest">
                             Yoga @ Infinity
                         </span>

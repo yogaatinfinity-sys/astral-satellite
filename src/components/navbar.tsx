@@ -65,8 +65,8 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 h-28 flex items-center",
-                scrolled ? "bg-soft-bone/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between py-2",
+                scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
             )}
         >
             <div className="max-w-7xl mx-auto w-full relative flex items-center justify-between">
@@ -77,7 +77,7 @@ export function Navbar() {
                         alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        className="h-[50px] md:h-[80px] lg:h-[115px] w-auto object-contain"
+                        className="h-[90px] md:h-[115px] w-auto object-contain"
                         style={{ filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }}
                         priority={true}
                         unoptimized={true}
