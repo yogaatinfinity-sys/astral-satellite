@@ -308,10 +308,10 @@ export default function LivePage() {
                                             </span>
                                             <span className="text-red-500 font-bold uppercase tracking-[0.2em] text-sm">Live Stream Active</span>
                                         </div>
-                                        <h3 className="text-4xl font-serif text-charcoal mb-4">Daily Vinyasa Practice</h3>
-                                        <div className="flex flex-wrap items-center gap-6 text-charcoal/60 font-medium text-lg">
-                                            <span className="flex items-center gap-2"><Clock size={20} className="text-[#6fcbcc]" /> 07:00 AM IST</span>
-                                            <span className="flex items-center gap-2"><Users size={20} className="text-[#6fcbcc]" /> Sarah J.</span>
+                                        <h3 className="text-3xl md:text-4xl font-bold font-serif text-slate-800 mb-4">Morning Infinity Flow</h3>
+                                        <div className="flex flex-wrap items-center gap-6 text-slate-600 font-medium text-lg">
+                                            <span className="flex items-center gap-2"><Clock size={20} className="text-[#6fcbcc]" /> 09:00 AM - 11:00 AM IST</span>
+                                            <span className="flex items-center gap-2"><Users size={20} className="text-[#6fcbcc]" /> Sharmila</span>
                                         </div>
                                     </div>
 
