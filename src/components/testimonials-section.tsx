@@ -10,6 +10,7 @@ interface Review {
     role: string;
     stars: number;
     comment: string;
+    image?: string;
 }
 
 interface TestimonialsSectionProps {
@@ -83,13 +84,22 @@ export function TestimonialsSection({ reviews }: TestimonialsSectionProps) {
                                         <p className="text-xl md:text-2xl font-serif font-bold text-slate-800 leading-relaxed mb-8">
                                             "{reviews[activeIndex].comment}"
                                         </p>
-                                        <div className="mt-auto pb-12">
-                                            <h4 className="text-lg font-bold text-[#0d9488]">
-                                                {reviews[activeIndex].name}
-                                            </h4>
-                                            <p className="text-sm font-medium text-slate-500 uppercase tracking-wide">
-                                                {reviews[activeIndex].role}
-                                            </p>
+                                        <div className="mt-auto pb-12 flex items-center gap-4">
+                                            {reviews[activeIndex].image && (
+                                                <img
+                                                    src={reviews[activeIndex].image}
+                                                    alt={reviews[activeIndex].name}
+                                                    className="w-14 h-14 rounded-full object-cover shadow-sm border-2 border-white flex-shrink-0"
+                                                />
+                                            )}
+                                            <div>
+                                                <h4 className="text-lg font-bold text-[#0d9488]">
+                                                    {reviews[activeIndex].name}
+                                                </h4>
+                                                <p className="text-sm font-medium text-slate-500 uppercase tracking-wide">
+                                                    {reviews[activeIndex].role}
+                                                </p>
+                                            </div>
                                         </div>
                                     </motion.div>
                                 </AnimatePresence>

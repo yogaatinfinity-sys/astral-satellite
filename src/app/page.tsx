@@ -16,6 +16,7 @@ const GOOGLE_REVIEWS = [
     name: "Sathyaseelan C.",
     role: "Local Guide",
     stars: 5,
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     comment: "Highly recommended place for learning yoga forms. They teach us well based on our comfort and object. Can see gradual progress day-by-day."
   },
   {
@@ -23,6 +24,7 @@ const GOOGLE_REVIEWS = [
     name: "Janani K.",
     role: "Student",
     stars: 5,
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     comment: "Sharmila is a great instructor. Started with very simple poses and basic breathing techniques and slowly graduated to tougher ones. No pressure, feel very relaxed learning here."
   },
   {
@@ -30,6 +32,7 @@ const GOOGLE_REVIEWS = [
     name: "Rajeshwar R.",
     role: "Local Guide",
     stars: 5,
+    image: "https://randomuser.me/api/portraits/men/46.jpg",
     comment: "Great place to practice yoga and grow. Opportunity to learn new poses and relax your mind. The wooden flooring and ambiance are perfectly suited for focus."
   }
 ];
