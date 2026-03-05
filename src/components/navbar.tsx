@@ -58,6 +58,7 @@ export function Navbar() {
     const navLinks = [
         { href: "/#zen-gravity", label: "The Collection" },
         { href: "/live", label: "Live Studio" },
+        { href: "/#gallery", label: "Gallery" },
         { href: "/#testimonials", label: "Stories" },
         { href: "/#contact", label: "Contact" },
     ]
@@ -85,7 +86,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Menu (Centered) */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-4 xl:gap-6">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
