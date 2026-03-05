@@ -16,8 +16,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yoga @ Infinity",
-  description: "Experience tranquility and strength with our premium yoga sessions.",
+  title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
+  description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
+  icons: {
+    icon: "/live/favicon-32x32.png",
+  },
+  openGraph: {
+    title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
+    description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
+    images: ["/logo.svg"],
+  },
 };
 
 export const viewport: Viewport = {
@@ -25,6 +33,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "#0d9488",
 };
 
 export default function RootLayout({
