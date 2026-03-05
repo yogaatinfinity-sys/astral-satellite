@@ -18,6 +18,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
+  icons: {
+    icon: "/icon.svg?v=4",
+  },
   openGraph: {
     title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
     description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
