@@ -209,7 +209,7 @@ export default function AdminDashboard() {
                         >
                             <LayoutDashboard size={16} className="md:w-[18px] md:h-[18px]" /> Admin Console
                         </motion.div>
-                        <h1 className="text-3xl md:text-5xl font-serif">Member Manager</h1>
+                        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">Member Manager</h1>
                     </div>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start md:self-center w-full sm:w-auto">
                         <Button
@@ -240,7 +240,7 @@ export default function AdminDashboard() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest">Total Students</p>
-                            <h2 className="text-3xl font-serif text-charcoal">{members.length}</h2>
+                            <h2 className="text-3xl font-bold text-slate-800">{members.length}</h2>
                         </div>
                     </motion.div>
 
@@ -255,7 +255,7 @@ export default function AdminDashboard() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest">In Studio Today</p>
-                            <h2 className="text-3xl font-serif text-charcoal">{presentOfflineCount}</h2>
+                            <h2 className="text-3xl font-bold text-slate-800">{presentOfflineCount}</h2>
                         </div>
                     </motion.div>
 
@@ -270,7 +270,7 @@ export default function AdminDashboard() {
                         </div>
                         <div>
                             <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest">Streaming Now</p>
-                            <h2 className="text-3xl font-serif text-charcoal">{presentOnlineCount}</h2>
+                            <h2 className="text-3xl font-bold text-slate-800">{presentOnlineCount}</h2>
                         </div>
                     </motion.div>
                 </div>
@@ -584,7 +584,7 @@ export default function AdminDashboard() {
                                 <QrCode size={32} />
                             </div>
 
-                            <h3 className="text-2xl font-serif text-charcoal mb-1">
+                            <h3 className="text-2xl font-semibold text-slate-800 mb-1">
                                 Studio Check-in
                             </h3>
                             <p className="text-sm text-charcoal/60 mb-8 max-w-[200px] mx-auto leading-relaxed">
@@ -642,7 +642,7 @@ export default function AdminDashboard() {
 
                             <div className="mb-8 pr-12">
                                 <p className="text-[#6fcbcc] font-bold tracking-widest uppercase text-xs mb-2">Attendance Timeline</p>
-                                <h3 className="text-3xl font-serif text-charcoal flex flex-col gap-1">
+                                <h3 className="text-3xl font-semibold text-slate-800 flex flex-col gap-1">
                                     <span className="break-all leading-tight">{historyModalMember.full_name || historyModalMember.email}</span>
                                 </h3>
                             </div>

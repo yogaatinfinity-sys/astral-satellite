@@ -106,7 +106,7 @@ export default function LoginPage() {
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#6fcbcc]/10 text-[#6fcbcc] mb-4">
                             <LogIn size={32} />
                         </div>
-                        <h1 className="text-3xl font-serif">Studio Admin</h1>
+                        <h1 className="text-3xl font-bold tracking-tight text-slate-900">Studio Admin</h1>
                         <p className="text-charcoal/60 mt-2">Manage your Yoga @ Infinity studio</p>
                     </div>
 

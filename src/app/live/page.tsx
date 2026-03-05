@@ -196,7 +196,7 @@ export default function LivePage() {
                                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-red-50 text-red-400 mb-8">
                                     <Lock size={48} />
                                 </div>
-                                <h2 className="text-4xl font-serif text-charcoal mb-4 italic">Registration Required</h2>
+                                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">Registration Required</h2>
                                 <div className="bg-[#FAFAEE] border border-red-100 rounded-2xl p-6 px-4 md:px-6 mb-10 w-full">
                                     <p className="text-red-500 font-serif text-xl leading-relaxed break-words">
                                         Email <span className="font-bold underline">{emailInput || verifiedEmail}</span> is not registered for live classes.
@@ -231,7 +231,7 @@ export default function LivePage() {
                                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#6fcbcc]/10 text-[#6fcbcc] mb-8">
                                     <Video size={48} />
                                 </div>
-                                <h2 className="text-4xl font-serif text-charcoal mb-4 italic">Virtual Studio</h2>
+                                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">Virtual Studio</h2>
                                 <p className="text-charcoal/60 mb-10 text-lg leading-relaxed">
                                     Please enter your registered email to join the live session.
                                 </p>
@@ -284,7 +284,7 @@ export default function LivePage() {
                                     <CheckCircle2 size={16} className="shrink-0" />
                                     <span className="text-xs font-bold uppercase tracking-widest leading-none pt-0.5 truncate shrink">Verified: {verifiedEmail}</span>
                                 </motion.div>
-                                <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight text-charcoal italic">
+                                <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6">
                                     Virtual Sanctuary
                                 </h1>
                                 <div className="h-1 w-24 bg-gold mx-auto mb-8" />
@@ -345,7 +345,7 @@ export default function LivePage() {
                     <section className="py-20 px-6 md:px-12 bg-transparent">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-16">
-                                <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-4">Studio Schedule</h2>
+                                <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">Studio Schedule</h2>
                                 <p className="text-charcoal/40 font-medium tracking-widest uppercase text-sm">Synchronized Worldwide</p>
                             </div>
 
@@ -360,11 +360,11 @@ export default function LivePage() {
                                         className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-sm border-l-[6px] border-[#6fcbcc] flex flex-col md:flex-row items-center justify-between gap-8 group hover:shadow-xl transition-all"
                                     >
                                         <div className="flex items-center gap-10 w-full md:w-auto">
-                                            <div className="text-[#6fcbcc] font-serif italic text-2xl min-w-[120px]">
+                                            <div className="text-[#6fcbcc] font-semibold text-xl md:text-2xl min-w-[120px]">
                                                 {item.day}
                                             </div>
                                             <div>
-                                                <h4 className="font-serif text-2xl text-charcoal font-bold mb-1">{item.class}</h4>
+                                                <h4 className="text-xl md:text-2xl font-medium mb-1 text-slate-700">{item.class}</h4>
                                                 <p className="text-[#6fcbcc] font-medium tracking-wide">{item.instructor}</p>
                                             </div>
                                         </div>
@@ -384,7 +384,7 @@ export default function LivePage() {
                     {/* My Progress Checker Section */}
                     <section className="py-20 px-6 md:px-12 bg-white relative z-20 border-t border-[#6fcbcc]/10">
                         <div className="max-w-3xl mx-auto text-center">
-                            <h2 className="text-4xl font-serif text-charcoal mb-4">My Progress</h2>
+                            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-slate-800">My Progress</h2>
                             <p className="text-charcoal/60 mb-10 text-lg">Enter your registered phone number to view your practice history.</p>
 
                             <form onSubmit={handleCheckProgress} className="relative max-w-md mx-auto mb-10">
@@ -419,11 +419,11 @@ export default function LivePage() {
                                     <div className="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-8 border-b border-[#6fcbcc]/20 pb-6">
                                         <div>
                                             <p className="text-[#6fcbcc] font-bold tracking-widest uppercase text-xs mb-2">Student Record</p>
-                                            <h3 className="text-3xl font-serif text-charcoal">{progressResult.name}</h3>
+                                            <h3 className="text-xl md:text-2xl font-medium text-slate-700">{progressResult.name}</h3>
                                         </div>
                                         <div className="bg-white px-6 py-3 rounded-2xl shadow-sm border border-[#6fcbcc]/10">
                                             <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest text-center">Total Classes</p>
-                                            <p className="text-3xl font-serif text-[#6fcbcc] text-center mt-1">{progressResult.history.length}</p>
+                                            <p className="text-3xl font-bold text-[#6fcbcc] text-center mt-1">{progressResult.history.length}</p>
                                         </div>
                                     </div>
 
