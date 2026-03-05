@@ -9,14 +9,14 @@ export function Footer() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10 w-full">
                 {/* Brand Column */}
-                <div className="text-left md:max-w-[30%] flex flex-col items-start">
-                    <div className="flex items-center gap-3 justify-start mb-4">
-                        <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[75px] md:h-[60px] w-auto object-contain" />
-                        <span className="text-xl font-serif font-bold text-charcoal tracking-widest">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left md:max-w-[30%]">
+                    <div className="flex flex-col md:flex-row items-center gap-3 justify-center md:justify-start mb-4">
+                        <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[75px] max-w-full md:h-[60px] w-auto object-contain flex-shrink-0" />
+                        <span className="text-xl font-serif font-bold text-charcoal tracking-widest mt-2 md:mt-0">
                             Yoga @ Infinity
                         </span>
                     </div>
-                    <p className="text-charcoal/60 text-sm mt-2">
+                    <p className="text-charcoal/60 text-sm mt-2 max-w-[280px] md:max-w-full">
                         Embark on a journey of mindfulness and strength.
                     </p>
                     <p className="text-charcoal/40 text-xs mt-6">© <span suppressHydrationWarning>{new Date().getFullYear()}</span> All rights reserved.</p>
