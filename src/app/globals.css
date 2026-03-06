@@ -167,28 +167,3 @@ body {
     padding-top: 8rem;
   }
 }
-
-/* iPad Forced Overrides */
-#ipad-logo-fix {
-  filter: none !important;
-  -webkit-filter: none !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
-}
-
-.touch-safe-button {
-  color: #0d9488 !important;
-  background-color: transparent !important;
-}
-
-.touch-safe-button:active {
-  color: #ffffff !important;
-  background-color: #0d9488 !important;
-}
-
-@media (hover: hover) {
-  .touch-safe-button:hover {
-    color: #ffffff !important;
-    background-color: #0d9488 !important;
-  }
-}

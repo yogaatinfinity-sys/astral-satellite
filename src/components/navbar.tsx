@@ -78,8 +78,8 @@ export function Navbar() {
                         alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        id="ipad-logo-fix"
                         className="h-[90px] md:h-[115px] w-auto object-contain"
+                        style={{ filter: 'none', WebkitFilter: 'none', transform: 'translateZ(0)' }}
                         priority={true}
                         unoptimized={true}
                     />
@@ -104,13 +104,12 @@ export function Navbar() {
                         <Button
                             variant="primary"
                             size="sm"
-                            className="bg-transparent border border-[#0d9488] font-bold tracking-wide transition-colors touch-safe-button"
-                            style={{ touchAction: 'manipulation' }}
+                            className="bg-transparent border border-[#0d9488] text-[#0d9488] [-webkit-tap-highlight-color:transparent] [@media(hover:hover)]:hover:bg-[#0d9488] [@media(hover:hover)]:hover:text-white font-bold tracking-wide transition-colors"
                         >
                             Manage Studio
                         </Button>
                     </Link>
-                    <Button variant="primary" size="sm" className="bg-transparent border border-[#0d9488] font-bold tracking-wide touch-safe-button" style={{ touchAction: 'manipulation' }} onClick={() => {
+                    <Button variant="primary" size="sm" className="bg-transparent border border-[#0d9488] text-[#0d9488] [-webkit-tap-highlight-color:transparent] [@media(hover:hover)]:hover:bg-[#0d9488] [@media(hover:hover)]:hover:text-white font-bold tracking-wide transition-colors" onClick={() => {
                         const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")
                     }}>
@@ -153,15 +152,13 @@ export function Navbar() {
                             <Link
                                 href={adminPath}
                                 onClick={() => setIsOpen(false)}
-                                className="w-full text-center text-lg font-bold tracking-wide border border-[#0d9488]/30 px-6 py-4 rounded-full bg-white/50 backdrop-blur-sm shadow-sm active:scale-[0.98] transition-all touch-safe-button"
-                                style={{ touchAction: 'manipulation' }}
+                                className="w-full text-center text-lg font-bold tracking-wide border border-[#0d9488]/30 px-6 py-4 rounded-full bg-white/50 backdrop-blur-sm shadow-sm active:scale-[0.98] transition-all text-[#0d9488] [-webkit-tap-highlight-color:transparent] [@media(hover:hover)]:hover:bg-[#0d9488] [@media(hover:hover)]:hover:text-white"
                             >
                                 Manage Studio
                             </Link>
                             <Button
                                 size="lg"
-                                className="w-full rounded-full py-7 text-lg bg-transparent border border-[#0d9488] shadow-lg shadow-[#0d9488]/20 font-bold tracking-wide touch-safe-button"
-                                style={{ touchAction: 'manipulation' }}
+                                className="w-full rounded-full py-7 text-lg bg-transparent border border-[#0d9488] shadow-lg shadow-[#0d9488]/20 font-bold tracking-wide text-[#0d9488] [-webkit-tap-highlight-color:transparent] [@media(hover:hover)]:hover:bg-[#0d9488] [@media(hover:hover)]:hover:text-white transition-colors"
                                 onClick={() => {
                                     const message = encodeURIComponent("Hello! I just saw your website and I would like to book a Yoga session. Please let me know the available slots.");
                                     window.open(`https://wa.me/919840941300?text=${message}`, "_blank");
