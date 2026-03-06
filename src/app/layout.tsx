@@ -16,13 +16,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
+  metadataBase: new URL('https://astral-satellite.vercel.app'),
+  title: {
+    default: "Yoga @ Infinity | Premium Yoga Oragadam",
+    template: "%s | Yoga @ Infinity"
+  },
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
   icons: {
     icon: "/icon.svg?v=4",
+    apple: "/live/favicon-32x32.png",
   },
   openGraph: {
-    title: "Yoga @ Infinity | Premium Yoga & Wellness Studio in Oragadam, Chennai",
+    title: "Yoga @ Infinity | Premium Yoga Oragadam",
     description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
     images: ["/logo.svg"],
   },

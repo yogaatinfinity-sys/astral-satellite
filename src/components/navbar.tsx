@@ -66,7 +66,7 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between py-2 [-webkit-box-shadow:none!important]",
+                "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between py-2 [-webkit-box-shadow:none!important] [-webkit-tap-highlight-color:transparent]",
                 scrolled ? "bg-soft-bone/80 backdrop-blur-md shadow-sm" : "bg-transparent"
             )}
         >
@@ -79,7 +79,7 @@ export function Navbar() {
                         width={110}
                         height={110}
                         className="h-[90px] md:h-[115px] w-auto object-contain"
-                        style={{ filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }}
+                        style={{ filter: 'drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1))', transform: 'translateZ(0)' }}
                         priority={true}
                         unoptimized={true}
                     />
@@ -91,7 +91,7 @@ export function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-sm font-semibold hover:text-teal-600 transition-colors tracking-wide whitespace-nowrap"
+                            className="text-sm font-semibold [@media(hover:hover)]:hover:text-teal-600 transition-colors tracking-wide whitespace-nowrap"
                         >
                             {link.label}
                         </Link>
@@ -104,7 +104,7 @@ export function Navbar() {
                         <Button
                             variant="primary"
                             size="sm"
-                            className="bg-transparent border border-[#6fcbcc] text-[#6fcbcc] hover:bg-[#6fcbcc] hover:text-white font-bold tracking-wide"
+                            className="bg-transparent border border-[#6fcbcc] text-[#6fcbcc] [@media(hover:hover)]:hover:bg-[#6fcbcc] [@media(hover:hover)]:hover:text-white font-bold tracking-wide transition-colors"
                         >
                             Manage Studio
                         </Button>
@@ -141,7 +141,7 @@ export function Navbar() {
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-3xl font-semibold hover:text-teal-600 transition-colors tracking-tight"
+                                    className="text-3xl font-semibold [@media(hover:hover)]:hover:text-teal-600 transition-colors tracking-tight"
                                 >
                                     {link.label}
                                 </a>
