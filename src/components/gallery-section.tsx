@@ -8,7 +8,7 @@ const galleryImages = [
     { src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800", alt: "Sunset Yoga Flow", span: "row-span-2" },
     { src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800", alt: "Aerial Silk Meditation", span: "row-span-1" },
     { src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800", alt: "Modern Studio Space", span: "row-span-1" },
-    { src: "/assets/serene-mindfulness.png", alt: "Serene Mindfulness", span: "row-span-2" },
+    { src: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&q=80&w=800", alt: "Serene Mindfulness", span: "row-span-2" },
     { src: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800", alt: "Lotus Pose", span: "row-span-1" },
     { src: "https://images.unsplash.com/photo-1524863479829-916d8e77f114?auto=format&fit=crop&q=80&w=800", alt: "Balanced Movement", span: "row-span-1" },
     { src: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80&w=800", alt: "Warrior Pose Grace", span: "row-span-1" },
