@@ -18,13 +18,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://astral-satellite.vercel.app'),
   title: {
-    default: "Yoga @ Infinity | Premium Yoga Oragadam",
+    default: "Yoga @ Infinity | Studio Oragadam",
     template: "%s | Yoga @ Infinity"
   },
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
   icons: {
-    icon: "/icon.svg?v=4",
-    apple: "/live/favicon-32x32.png",
+    icon: "/icon.svg?v=2",
+    apple: "/live/favicon-32x32.png?v=2",
+  },
+  appleWebApp: {
+    title: "Yoga @ Infinity",
   },
   openGraph: {
     title: "Yoga @ Infinity | Premium Yoga Oragadam",
