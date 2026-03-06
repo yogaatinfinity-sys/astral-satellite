@@ -170,13 +170,20 @@ body {
 
 /* iPad Forced Overrides */
 #ipad-logo-fix {
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) !important;
-  -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) !important;
-  transform: translateZ(0);
+  filter: none !important;
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 .touch-safe-button {
   color: #0d9488 !important;
+  background-color: transparent !important;
+}
+
+.touch-safe-button:active {
+  color: #ffffff !important;
+  background-color: #0d9488 !important;
 }
 
 @media (hover: hover) {

@@ -23,8 +23,7 @@ export const metadata: Metadata = {
   },
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
   icons: {
-    icon: "/icon.svg?v=2",
-    apple: "/live/favicon-32x32.png?v=2",
+    icon: "/icon.svg?v=3",
   },
   appleWebApp: {
     title: "Yoga @ Infinity",
@@ -51,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased bg-soft-bone text-charcoal">
+      <body className="antialiased bg-soft-bone text-charcoal" onTouchStart={() => { }}>
         <PageTransition>
           {children}
         </PageTransition>
