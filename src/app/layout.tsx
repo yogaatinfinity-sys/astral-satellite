@@ -18,8 +18,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://astral-satellite.vercel.app'),
   title: {
-    default: "Yoga @ Infinity",
-    template: "%s | Yoga @ Infinity"
+    default: "Yoga@Infinity | Premium Yoga Studio",
+    template: "%s | Yoga@Infinity"
   },
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
   icons: {
@@ -52,6 +52,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="antialiased bg-soft-bone text-charcoal">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Yoga@Infinity",
+              "url": "https://yogaatinfinity.com/"
+            })
+          }}
+        />
         <PageTransition>
           {children}
         </PageTransition>
