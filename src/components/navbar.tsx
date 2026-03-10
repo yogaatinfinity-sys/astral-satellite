@@ -74,11 +74,11 @@ export function Navbar() {
                 {/* Logo (Left for both Desktop and Mobile) */}
                 <Link href="/" className="flex items-center gap-3 z-50 pl-4 md:pl-8 group">
                     <Image
-                        src="/logo.png"
+                        src="/nav-logo.svg"
                         alt="Yoga @ Infinity Logo"
-                        width={110}
-                        height={110}
-                        className="w-16 h-16 md:w-20 md:h-20 bg-transparent object-contain [-webkit-appearance:none]"
+                        width={140}
+                        height={100}
+                        className="w-24 h-16 md:w-32 md:h-20 bg-transparent object-contain [-webkit-appearance:none]"
                         style={{ mixBlendMode: 'normal', backgroundBlendMode: 'normal', WebkitAppearance: 'none' }}
                         priority={true}
                         unoptimized={true}
