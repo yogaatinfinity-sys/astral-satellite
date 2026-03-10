@@ -72,14 +72,14 @@ export function Navbar() {
         >
             <div className="max-w-7xl mx-auto w-full relative flex items-center justify-between">
                 {/* Logo (Left for both Desktop and Mobile) */}
-                <Link href="/" className="flex items-center gap-3 z-50 pl-4 md:pl-8">
+                <Link href="/" className="flex items-center gap-3 z-50 pl-4 md:pl-8 group">
                     <Image
-                        src="/logo.svg"
+                        src="/logo.png"
                         alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        className="h-[90px] md:h-[115px] w-auto object-contain"
-                        style={{ filter: 'none', WebkitFilter: 'none', transform: 'translateZ(0)' }}
+                        className="w-16 h-16 md:w-20 md:h-20 bg-transparent object-contain"
+                        style={{ mixBlendMode: 'normal' }}
                         priority={true}
                         unoptimized={true}
                     />
