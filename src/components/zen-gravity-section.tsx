@@ -114,7 +114,7 @@ export function ZenGravitySection() {
                                 },
                             }}
                             whileHover={{ scale: 1.02 }}
-                            className="bg-white/60 backdrop-blur-sm border border-charcoal/10 p-8 rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[320px]"
+                            className="bg-white/60 backdrop-blur-sm border border-charcoal/10 p-8 rounded-3xl relative group shadow-sm hover:shadow-md transition-all flex flex-col w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[320px]"
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-brand-primary/20 transition-colors duration-500 pointer-events-none" />
 
