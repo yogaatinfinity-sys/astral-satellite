@@ -263,15 +263,23 @@ export default function AdminDashboard() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-white p-6 rounded-2xl border border-blue-500/20 shadow-sm flex items-center gap-4"
+                        className="bg-white p-6 rounded-2xl border border-blue-500/20 shadow-sm flex items-center justify-between gap-4"
                     >
-                        <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500">
-                            <span className="text-2xl">💻</span>
+                        <div className="flex items-center gap-4">
+                            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500">
+                                <span className="text-2xl">💻</span>
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest">Streaming Now</p>
+                                <h2 className="text-3xl font-bold text-slate-800">{presentOnlineCount}</h2>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest">Streaming Now</p>
-                            <h2 className="text-3xl font-bold text-slate-800">{presentOnlineCount}</h2>
-                        </div>
+                        <Button
+                            onClick={() => window.open("https://meet.google.com/ofn-wmhf-vkm", "_blank")}
+                            className="bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl px-4 py-2 text-sm transition-all shadow-sm flex items-center gap-2"
+                        >
+                            <Globe size={16} /> Host Live
+                        </Button>
                     </motion.div>
                 </div>
 
