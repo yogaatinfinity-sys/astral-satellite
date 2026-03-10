@@ -100,13 +100,12 @@ export function ZenGravitySection() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+                <div className="flex flex-wrap justify-center gap-8 w-full max-w-6xl">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
                             animate={{
-                                y: [0, -20, 0],
-                                rotate: [0, 1, -1, 0],
+                                y: [0, -10, 0],
                                 transition: {
                                     duration: 4 + (index % 3), // Staggered float duration
                                     repeat: Infinity,
@@ -114,29 +113,29 @@ export function ZenGravitySection() {
                                     delay: index * 0.2,
                                 },
                             }}
-                            whileHover={{ scale: 1.05 }}
-                            className="bg-white/60 backdrop-blur-sm border border-charcoal/10 p-8 rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col h-full"
+                            whileHover={{ scale: 1.02 }}
+                            className="bg-white/60 backdrop-blur-sm border border-charcoal/10 p-8 rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[320px]"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-brand-primary/20 transition-colors duration-500" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-brand-primary/20 transition-colors duration-500 pointer-events-none" />
 
-                            <div className="relative z-10 flex flex-col h-full">
-                                <div className="h-12 w-12 rounded-full bg-brand-primary/10 text-brand-primary mb-6 flex items-center justify-center">
+                            <div className="relative z-10 flex flex-col h-full flex-grow">
+                                <div className="h-12 w-12 rounded-full bg-brand-primary/10 text-brand-primary mb-6 flex items-center justify-center shrink-0">
                                     <service.icon size={24} />
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-medium mb-3 text-slate-700">{service.title}</h3>
-                                <p className="text-brand-primary font-medium text-sm mb-4">{service.subtitle}</p>
-                                <p className="text-sm text-charcoal/60 leading-relaxed mb-6 flex-grow">
+                                <h3 className="text-xl md:text-2xl font-medium mb-3 text-slate-700 whitespace-normal break-words">{service.title}</h3>
+                                <p className="text-brand-primary font-medium text-sm mb-4 whitespace-normal break-words">{service.subtitle}</p>
+                                <p className="text-sm text-charcoal/60 leading-relaxed mb-6 flex-grow whitespace-normal break-words">
                                     {service.description}
                                 </p>
                                 <Button
                                     variant="ghost"
-                                    className="text-[#6fcbcc] hover:text-charcoal hover:bg-[#6fcbcc]/10 w-full justify-between group-hover:pl-4 transition-all mt-auto font-bold tracking-wide"
+                                    className="text-[#6fcbcc] hover:text-charcoal hover:bg-[#6fcbcc]/10 w-full justify-between group-hover:pl-4 transition-all mt-auto font-bold tracking-wide whitespace-normal h-auto py-3 shrink-0"
                                     onClick={() => {
                                         const message = encodeURIComponent(`Namaste! I just saw your website and I would like to book a session for ${service.title}. Please let me know the available slots.`);
                                         window.open(`https://wa.me/919840941300?text=${message}`, "_blank")
                                     }}
                                 >
-                                    Book Session <span className="text-lg">→</span>
+                                    <span>Book Session</span> <span className="text-lg ml-2 shrink-0">→</span>
                                 </Button>
                             </div>
                         </motion.div>

@@ -78,8 +78,8 @@ export function Navbar() {
                         alt="Yoga @ Infinity Logo"
                         width={110}
                         height={110}
-                        className="w-16 h-16 md:w-20 md:h-20 bg-transparent object-contain"
-                        style={{ mixBlendMode: 'normal' }}
+                        className="w-16 h-16 md:w-20 md:h-20 bg-transparent object-contain [-webkit-appearance:none]"
+                        style={{ mixBlendMode: 'normal', backgroundBlendMode: 'normal', WebkitAppearance: 'none' }}
                         priority={true}
                         unoptimized={true}
                     />
