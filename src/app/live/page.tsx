@@ -336,7 +336,7 @@ export default function LivePage() {
                                         </a>
                                         <button
                                             onClick={() => {
-                                                navigator.clipboard.writeText("https://meet.google.com/new")
+                                                navigator.clipboard.writeText("https://meet.google.com/ofn-wmhf-vkm")
                                                 alert("Meeting link copied to clipboard!")
                                             }}
                                             className="text-sm text-charcoal/50 hover:text-[#6fcbcc] underline transition-colors"
