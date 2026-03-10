@@ -325,7 +325,7 @@ export default function LivePage() {
 
                                     <div className="flex flex-col items-center gap-3 w-full md:w-auto">
                                         <a
-                                            href="https://meet.google.com/new"
+                                            href="https://meet.google.com/ofn-wmhf-vkm"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             onClick={handleOnlineCheckIn}
