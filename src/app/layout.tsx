@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://astral-satellite.vercel.app'),
+  metadataBase: new URL('https://yogaatinfinity.com'),
   title: {
     default: "Yoga@Infinity | Premium Yoga Studio",
     template: "%s | Yoga@Infinity"
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yoga @ Infinity | Premium Yoga Oragadam",
     description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
-    images: ["/logo.svg"],
+    images: ["/nav-logo.svg"],
   },
 };
 

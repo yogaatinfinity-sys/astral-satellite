@@ -11,7 +11,7 @@ export function Footer() {
                 {/* Brand Column */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:max-w-[30%]">
                     <div className="flex flex-col md:flex-row items-center gap-3 justify-center md:justify-start w-full mb-4">
-                        <img src="/logo.svg" alt="Yoga @ Infinity Logo" className="h-[75px] md:h-[60px] w-auto object-contain flex-shrink-0 mx-auto md:mx-0" />
+                        <img src="/nav-logo.svg" alt="Yoga @ Infinity Logo" className="h-[75px] md:h-[60px] w-auto object-contain flex-shrink-0 mx-auto md:mx-0" />
                         <span className="text-xl font-serif font-bold text-charcoal tracking-widest block text-center md:text-left mt-2 md:mt-0">
                             Yoga @ Infinity
                         </span>
