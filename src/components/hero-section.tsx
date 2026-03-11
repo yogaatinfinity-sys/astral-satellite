@@ -125,20 +125,20 @@ export function HeroSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
                     style={{ y: isMobile ? 0 : smoothY }}
-                    className="relative w-full flex justify-center lg:justify-end pr-0 lg:pr-12"
+                    className="relative w-full flex justify-center lg:justify-end"
                 >
                     <motion.div
-                        animate={{ y: [0, -20, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-[calc(100%-2rem)] aspect-[16/9] md:w-[450px] md:aspect-auto md:h-[400px] lg:h-[400px] rounded-[3rem] overflow-hidden mx-auto"
+                        animate={{ y: [0, -15, 0] }}
+                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                        className="relative w-full max-w-[600px] aspect-[4/5] lg:aspect-auto lg:h-[700px] flex items-center justify-center lg:justify-end"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1200"
-                            alt="Yoga outdoors at sunset"
+                            src="/assets/hero-pose.webp"
+                            alt="Yoga teacher in teal outfit performing a backbend pose"
                             fill
                             priority
-                            sizes="(max-width: 768px) 100vw, 450px"
-                            className="object-cover"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.15)] drop-shadow-[0_15px_15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:scale-[1.02]"
                         />
                     </motion.div>
                 </motion.div>
