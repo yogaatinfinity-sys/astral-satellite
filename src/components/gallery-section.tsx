@@ -34,7 +34,7 @@ const curatedImages: GalleryImage[] = [
     },
     { 
         src: "/assets/gallery/infinity-5.webp", 
-        alt: "Yoga morning", 
+        alt: "Backbend yoga pose", 
         orientation: "square" 
     },
     { 
@@ -50,7 +50,7 @@ const curatedImages: GalleryImage[] = [
     { 
         src: "/assets/gallery/infinity-8.webp", 
         alt: "Meditation circle", 
-        orientation: "landscape" 
+        orientation: "square" 
     },
 ]
 
@@ -83,8 +83,8 @@ export function GallerySection() {
                     </motion.p>
                 </div>
 
-                {/* Main Bento Grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 auto-rows-[200px] md:auto-rows-[300px]">
+                {/* Main Bento Grid with Dense Packing */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 grid-flow-dense auto-rows-[200px] md:auto-rows-[250px] lg:auto-rows-[300px]">
                     {curatedImages.map((image, index) => (
                         <motion.div
                             key={index}
@@ -96,26 +96,25 @@ export function GallerySection() {
                                 delay: index * 0.1,
                                 ease: "easeOut"
                             }}
-                            className={`relative overflow-hidden group cursor-pointer rounded-2xl
-                                ${image.orientation === 'portrait' ? 'row-span-2 col-span-1 lg:row-span-2 lg:col-span-1' : ''}
-                                ${image.orientation === 'landscape' ? 'col-span-2 lg:col-span-2 lg:row-span-1' : ''}
-                                ${image.orientation === 'square' ? 'col-span-1 lg:col-span-1 lg:row-span-1' : ''}
-                                max-lg:col-span-1 max-lg:row-span-1 
-                                max-lg:max-w-full
+                            className={`relative overflow-hidden group cursor-pointer rounded-xl
+                                ${image.orientation === 'portrait' ? 'row-span-2 col-span-1' : ''}
+                                ${image.orientation === 'landscape' ? 'col-span-2 row-span-1' : ''}
+                                ${image.orientation === 'square' ? 'col-span-1 row-span-1' : ''}
+                                max-lg:col-span-1 max-lg:row-span-1
                             `}
                         >
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 fill
-                                sizes="(max-width: 1024px) 50vw, 33vw"
+                                sizes="(max-width: 1024px) 50vw, 25vw"
                                 className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110
                                     ${image.orientation === 'portrait' ? 'object-top' : 'object-center'}
                                 `}
                             />
                             
                             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl z-20" />
+                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-xl z-20" />
                         </motion.div>
                     ))}
                 </div>
