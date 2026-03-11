@@ -4,12 +4,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 const galleryImages = [
-    { src: "/assets/gallery/infinity-1.webp", alt: "Yoga practice session 1" },
-    { src: "/assets/gallery/infinity-2.webp", alt: "Yoga practice session 2" },
-    { src: "/assets/gallery/infinity-3.webp", alt: "Yoga practice session 3" },
-    { src: "/assets/gallery/infinity-4.webp", alt: "Yoga practice session 4" },
-    { src: "/assets/gallery/infinity-5.webp", alt: "Yoga practice session 5" },
-    { src: "/assets/gallery/infinity-6.webp", alt: "Yoga practice session 6" },
+    { src: "/assets/gallery/infinity-1.webp", alt: "Yoga practice session 1", span: "lg:row-span-2" },
+    { src: "/assets/gallery/infinity-2.webp", alt: "Yoga practice session 2", span: "lg:row-span-1" },
+    { src: "/assets/gallery/infinity-3.webp", alt: "Yoga practice session 3", span: "lg:row-span-1" },
+    { src: "/assets/gallery/infinity-4.webp", alt: "Yoga practice session 4", span: "lg:row-span-2" },
+    { src: "/assets/gallery/infinity-5.webp", alt: "Yoga practice session 5", span: "lg:row-span-1" },
+    { src: "/assets/gallery/infinity-6.webp", alt: "Yoga practice session 6", span: "lg:row-span-1" },
 ]
 
 export function GallerySection() {
@@ -37,7 +37,7 @@ export function GallerySection() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
                     {galleryImages.map((image, index) => (
                         <motion.div
                             key={index}
@@ -49,20 +49,20 @@ export function GallerySection() {
                                 delay: index * 0.1,
                                 ease: [0.21, 0.47, 0.32, 0.98]
                             }}
-                            className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                            className={`relative rounded-3xl overflow-hidden shadow-xl group cursor-pointer ${image.span}`}
                         >
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:opacity-90 grayscale-[20%] group-hover:grayscale-0"
+                                className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:opacity-90 grayscale-[10%] group-hover:grayscale-0"
                             />
                             
                             {/* Overlay for interaction */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             
-                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl" />
+                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-3xl" />
                         </motion.div>
                     ))}
                 </div>
