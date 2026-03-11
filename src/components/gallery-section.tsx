@@ -42,6 +42,16 @@ const curatedImages: GalleryImage[] = [
         alt: "Standing pose", 
         orientation: "portrait" 
     },
+    { 
+        src: "/assets/gallery/infinity-7.webp", 
+        alt: "Healing sound bath", 
+        orientation: "landscape" 
+    },
+    { 
+        src: "/assets/gallery/infinity-8.webp", 
+        alt: "Meditation circle", 
+        orientation: "landscape" 
+    },
 ]
 
 const additionalImages: string[] = []
