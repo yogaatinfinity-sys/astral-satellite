@@ -125,20 +125,20 @@ export function HeroSection() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                     style={{ y: isMobile ? 0 : smoothY }}
-                    className="relative w-full h-[400px] lg:h-[750px] flex justify-center lg:justify-end items-center"
+                    className="relative w-full h-[350px] lg:h-[550px] flex justify-center lg:justify-end items-center lg:pr-8"
                 >
                     <motion.div
-                        animate={{ y: [0, -20, 0] }}
+                        animate={{ y: [0, -15, 0] }}
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-full h-full transform-gpu lg:scale-110 xl:scale-125 origin-center lg:origin-right"
+                        className="relative w-full h-full max-w-[500px] transform-gpu"
                     >
                         <Image
                             src="/assets/hero-pose.webp"
                             alt="Yoga teacher in teal outfit performing a backbend pose"
                             fill
                             priority
-                            sizes="(max-width: 1024px) 100vw, 60vw"
-                            className="object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.2)] drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)] transition-all duration-700 hover:scale-[1.05]"
+                            sizes="(max-width: 1024px) 100vw, 400px"
+                            className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] drop-shadow-[0_8px_15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:scale-[1.02]"
                         />
                     </motion.div>
                 </motion.div>
