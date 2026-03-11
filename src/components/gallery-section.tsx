@@ -6,33 +6,27 @@ import Image from "next/image"
 const galleryImages = [
     { 
         src: "/assets/gallery/infinity-1.webp", 
-        alt: "Horizontal yoga pose", 
-        className: "md:col-span-2 md:row-span-2" 
+        alt: "Large yoga feature", 
+        className: "md:col-span-2 md:row-span-2",
+        objectPos: "object-center"
     },
     { 
         src: "/assets/gallery/infinity-2.webp", 
-        alt: "Group yoga session", 
-        className: "md:col-span-1 md:row-span-1" 
+        alt: "Yoga session", 
+        className: "md:col-span-1 md:row-span-1",
+        objectPos: "object-center"
+    },
+    { 
+        src: "/assets/gallery/infinity-5.webp", 
+        alt: "Yoga pose", 
+        className: "md:col-start-3 md:row-start-2 md:col-span-1 md:row-span-1",
+        objectPos: "object-center"
     },
     { 
         src: "/assets/gallery/infinity-4.webp", 
         alt: "Standing Natarajasana portrait pose", 
-        className: "md:col-span-1 md:row-span-2" 
-    },
-    { 
-        src: "/assets/gallery/infinity-5.webp", 
-        alt: "Backbend horizontal pose", 
-        className: "md:col-span-1 md:row-span-1" 
-    },
-    { 
-        src: "/assets/gallery/infinity-3.webp", 
-        alt: "Yoga serenity", 
-        className: "md:col-span-1 md:row-span-1" 
-    },
-    { 
-        src: "/assets/gallery/infinity-6.webp", 
-        alt: "Yoga strength", 
-        className: "md:col-span-1 md:row-span-1" 
+        className: "md:col-start-4 md:row-span-2",
+        objectPos: "object-top"
     },
 ]
 
@@ -61,37 +55,33 @@ export function GallerySection() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px] lg:auto-rows-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-2 h-auto md:h-[600px] lg:h-[700px]">
                     {galleryImages.map((image, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                            initial={{ opacity: 0, scale: 0.98, y: 20 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true, margin: "-50px" }}
                             transition={{ 
-                                duration: 0.7, 
+                                duration: 0.5, 
                                 delay: index * 0.1,
-                                ease: [0.21, 0.47, 0.32, 0.98]
+                                ease: "easeOut"
                             }}
-                            className={`relative rounded-3xl overflow-hidden group cursor-pointer ${image.className}`}
+                            className={`relative overflow-hidden group cursor-pointer rounded-xl h-[300px] md:h-full ${image.className}`}
                         >
-                            <div className="absolute inset-0 z-10 p-4">
-                                <Image
-                                    src={image.src}
-                                    alt={image.alt}
-                                    fill
-                                    sizes="(max-width: 768px) 50vw, 33vw"
-                                    className="object-contain transition-all duration-700 group-hover:scale-105 drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] drop-shadow-[0_10px_15px_rgba(0,0,0,0.1)]"
-                                />
-                            </div>
-                            
-                            {/* Accent Background for depth */}
-                            <div className="absolute inset-0 bg-white/40 group-hover:bg-white/60 transition-colors duration-500 rounded-3xl" />
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                fill
+                                priority={index < 2}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                className={`w-full h-full object-cover ${image.objectPos} transition-transform duration-700 group-hover:scale-105`}
+                            />
                             
                             {/* Overlay for interaction */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
+                            <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                             
-                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-3xl z-30" />
+                            <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-xl z-20" />
                         </motion.div>
                     ))}
                 </div>
