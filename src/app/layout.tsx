@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     icon: '/icon-v2.png',
     apple: '/icon-v2.png',
   },
+  alternates: {
+    canonical: 'https://yogaatinfinity.com/',
+  },
   openGraph: {
     title: "Yoga @ Infinity | Premium Yoga Oragadam",
     description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
