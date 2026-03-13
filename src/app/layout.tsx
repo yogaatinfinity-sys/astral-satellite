@@ -24,8 +24,13 @@ export const metadata: Metadata = {
   description: "Elevate your practice with Sharmila at Yoga @ Infinity. Join our 9:00 AM - 11:00 AM sessions in Oragadam, specializing in Hatha, Strength Yoga, and Women Wellness for peak performance.",
 
   icons: {
-    icon: '/icon-v2.png',
-    apple: '/icon-v2.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-v2.png', type: 'image/png', sizes: '144x144' },
+    ],
+    apple: [
+      { url: '/icon-v2.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   alternates: {
     canonical: 'https://yogaatinfinity.com/',

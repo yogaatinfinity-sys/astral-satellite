@@ -14,6 +14,13 @@ export default function manifest(): MetadataRoute.Manifest {
                 src: '/icon-v2.png',
                 sizes: '144x144',
                 type: 'image/png',
+                purpose: 'any',
+            },
+            {
+                src: '/icon-v2.png',
+                sizes: '192x192',
+                type: 'image/png',
+                purpose: 'maskable',
             },
         ],
     }
