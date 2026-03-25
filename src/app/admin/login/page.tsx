@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabase"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
-import { LogIn, Mail, Lock, AlertCircle } from "lucide-react"
+import { LogIn, Mail, Lock, AlertCircle, Eye, EyeOff } from "lucide-react"
 
 const ADMIN_EMAIL = "yogaatinfinity@gmail.com"
 
@@ -14,6 +14,7 @@ export default function LoginPage() {
     const router = useRouter()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [showPassword, setShowPassword] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [message, setMessage] = useState<string | null>(null)
@@ -138,14 +139,24 @@ export default function LoginPage() {
                                     Forgot Password?
                                 </button>
                             </div>
-                            <input
-                                type="password"
-                                required
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
-                                placeholder="••••••••"
-                            />
+                            <div className="relative">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
+                                    placeholder="••••••••"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6fcbcc]/60 hover:text-[#6fcbcc] focus:outline-none focus:text-[#6fcbcc] transition-colors p-1"
+                                    aria-label={showPassword ? "Hide password" : "Show password"}
+                                >
+                                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                </button>
+                            </div>
                         </div>
 
                         {error && (

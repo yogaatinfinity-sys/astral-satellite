@@ -6,12 +6,13 @@ import { supabase } from "@/lib/supabase"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
-import { KeyRound, Lock, AlertCircle, CheckCircle2 } from "lucide-react"
+import { KeyRound, Lock, AlertCircle, CheckCircle2, Eye, EyeOff } from "lucide-react"
 
 export default function ResetPasswordPage() {
     const router = useRouter()
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
+    const [showPassword, setShowPassword] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [success, setSuccess] = useState(false)
@@ -87,30 +88,50 @@ export default function ResetPasswordPage() {
                                 <label className="text-sm font-bold flex items-center gap-2">
                                     <Lock size={16} /> New Password
                                 </label>
-                                <input
-                                    type="password"
-                                    required
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
-                                    placeholder="••••••••"
-                                    minLength={6}
-                                />
+                                <div className="relative">
+                                    <input
+                                        type={showPassword ? "text" : "password"}
+                                        required
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
+                                        placeholder="••••••••"
+                                        minLength={6}
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6fcbcc]/60 hover:text-[#6fcbcc] focus:outline-none focus:text-[#6fcbcc] transition-colors p-1"
+                                        aria-label={showPassword ? "Hide password" : "Show password"}
+                                    >
+                                        {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="space-y-2">
                                 <label className="text-sm font-bold flex items-center gap-2">
                                     <Lock size={16} /> Confirm New Password
                                 </label>
-                                <input
-                                    type="password"
-                                    required
-                                    value={confirmPassword}
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                    className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
-                                    placeholder="••••••••"
-                                    minLength={6}
-                                />
+                                <div className="relative">
+                                    <input
+                                        type={showPassword ? "text" : "password"}
+                                        required
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                        className="w-full bg-[#FAFAEE] border border-[#6fcbcc]/20 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-[#6fcbcc]/50 transition-all"
+                                        placeholder="••••••••"
+                                        minLength={6}
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6fcbcc]/60 hover:text-[#6fcbcc] focus:outline-none focus:text-[#6fcbcc] transition-colors p-1"
+                                        aria-label={showPassword ? "Hide password" : "Show password"}
+                                    >
+                                        {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                    </button>
+                                </div>
                             </div>
 
                             {error && (
