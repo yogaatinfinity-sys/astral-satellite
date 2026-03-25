@@ -88,7 +88,7 @@ export function HeroSection() {
                         transition={itemTransition}
                         className="text-lg md:text-xl font-light text-slate-500 max-w-2xl mb-10"
                     >
-                        From foundational Hatha to high-intensity Strength Yoga with dumbbells. Elevate your physical and mental peak in our<br>signature morning flow.</br>
+                        From foundational Hatha to high-intensity Strength Yoga with dumbbells. Elevate your physical and mental peak in our<br />signature morning flow.
                     </motion.p>
 
                     <motion.div
