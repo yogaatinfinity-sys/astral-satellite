@@ -54,7 +54,7 @@ export function WhyYogaSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-charcoal/60 max-w-2xl mx-auto text-lg leading-relaxed"
                     >
-                        Yoga is more than a physical practice—it’s a pathway to well-being for individuals and communities alike:
+                        Yoga is more than a physical practice it’s a pathway to well being for individuals and communities alike:
                     </motion.p>
                 </div>
 
